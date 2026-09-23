@@ -1,346 +1,415 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Script Consultant &amp; Screenplay Notes | Matt Tabak, Former Studio Exec</title>
-<meta name="description" content="Screenplay and TV pilot notes from script consultant Matt Tabak, former Disney, Paramount and Warner Bros. executive, WGA writer and attorney. Rates from $175.">
-<link rel="canonical" href="https://screenwritingconsultant.com/">
-<!-- Demo copy: keep it out of search results so it doesn't compete with the live site. Remove on the live site. -->
-<meta name="robots" content="noindex, nofollow">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Screenwriting Consultant">
-<meta property="og:title" content="Script Consultant &amp; Screenplay Notes from a Former Studio Executive">
-<meta property="og:description" content="Notes from the executive who bought Face/Off, developed Pretty Woman and gave the writer of Se7en his first job.">
-<meta property="og:url" content="https://screenwritingconsultant.com/">
-<meta property="og:image" content="https://screenwritingconsultant.com/wp-content/uploads/2025/06/Matt-Tabac-Portrait-scaled.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://screenwritingconsultant.com/#business",
-      "name": "Screenwriting Consultant",
-      "url": "https://screenwritingconsultant.com/",
-      "description": "Screenplay notes, TV pilot notes, treatment analysis and career advice from former studio executive Matt Tabak.",
-      "areaServed": "US",
-      "address": { "@type": "PostalAddress", "addressLocality": "Los Angeles", "addressRegion": "CA", "addressCountry": "US" },
-      "founder": { "@id": "https://screenwritingconsultant.com/about/#matt" },
-      "makesOffer": [
-        { "@type": "Offer", "name": "Feature screenplay notes", "price": "600", "priceCurrency": "USD" },
-        { "@type": "Offer", "name": "TV pilot notes", "price": "400", "priceCurrency": "USD" },
-        { "@type": "Offer", "name": "Treatment analysis", "price": "350", "priceCurrency": "USD" },
-        { "@type": "Offer", "name": "Logline and idea punch-up", "price": "175", "priceCurrency": "USD" },
-        { "@type": "Offer", "name": "Career, deal and production advice (first hour)", "price": "195", "priceCurrency": "USD" }
-      ]
-    },
-    {
-      "@type": "Person",
-      "@id": "https://screenwritingconsultant.com/about/#matt",
-      "name": "Matt Tabak",
-      "alternateName": "Matthew Tabak",
-      "jobTitle": "Script consultant",
-      "url": "https://screenwritingconsultant.com/about/",
-      "sameAs": [
-        "https://www.imdb.com/name/nm0845860/",
-        "https://www.chapman.edu/our-faculty/matthew-tabak.aspx"
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "Do I get written notes?", "acceptedAnswer": { "@type": "Answer", "text": "Not by default. The core of every service is a live call by Zoom or phone, which you can record. Written notes are available as an add-on." } },
-        { "@type": "Question", "name": "What does script consulting with Matt Tabak cost?", "acceptedAnswer": { "@type": "Answer", "text": "Feature screenplay notes are $600, TV pilot notes $400, treatment analysis $350, a logline punch-up $175, and career, deal and production advice $195 for the first hour and $125 for each additional hour." } }
-      ]
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Screenwriting Consultant | Matt Tabak</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;1,400&family=Rye&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #120e0b;
+      background-image:
+        radial-gradient(circle at 50% 30%, rgba(68, 48, 33, 0.45), transparent 70%),
+        radial-gradient(circle at 20% 80%, rgba(30, 20, 15, 0.6), transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(30, 20, 15, 0.6), transparent 50%);
+      font-family: 'Courier Prime', Courier, monospace;
     }
-  ]
-}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=Courier+Prime&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+    .perspective-container {
+      perspective: 1200px;
+      perspective-origin: 50% 15%;
+    }
+    .paper-curve-sheet {
+      transform-origin: center bottom;
+      transform: rotateX(8.5deg) translateZ(0);
+      box-shadow:
+        0 -20px 40px -10px rgba(0, 0, 0, 0.7),
+        0 15px 35px rgba(0, 0, 0, 0.6),
+        inset 0 40px 60px -20px rgba(0,0,0,0.22);
+    }
+    .paper-texture {
+      background-color: #f7f3e8;
+      background-image:
+        radial-gradient(#d6cbb5 0.75px, transparent 0.75px),
+        linear-gradient(to right, rgba(0,0,0,0.03) 0%, transparent 8%, transparent 92%, rgba(0,0,0,0.04) 100%);
+      background-size: 24px 24px, 100% 100%;
+    }
+    .paper-top-shadow {
+      background: linear-gradient(to bottom,
+        rgba(15, 10, 8, 0.55) 0%,
+        rgba(25, 18, 12, 0.3) 14%,
+        rgba(50, 40, 30, 0.12) 30%,
+        transparent 55%);
+      pointer-events: none;
+    }
+    .crinkle-enamel {
+      background-color: #1a1614;
+      background-image:
+        radial-gradient(rgba(255,255,255,0.035) 1px, transparent 0),
+        radial-gradient(rgba(0,0,0,0.6) 1px, transparent 0);
+      background-size: 4px 4px, 3px 3px;
+      background-position: 0 0, 1.5px 1.5px;
+    }
+    .chrome-metal {
+      background: linear-gradient(135deg, #a3a3a3 0%, #ffffff 30%, #737373 50%, #ffffff 75%, #525252 100%);
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.6), inset 0 1px 1px rgba(255,255,255,0.8);
+    }
+    .knurled-roller {
+      background: repeating-linear-gradient(90deg, #181818 0px, #282828 2px, #0f0f0f 4px);
+    }
+    .vintage-key {
+      background: radial-gradient(circle at 40% 35%, #fffdfa 0%, #ebe2ce 70%, #d8caa7 100%);
+      box-shadow:
+        0 4px 6px rgba(0,0,0,0.8),
+        0 2px 2px rgba(0,0,0,0.5),
+        inset 0 0 0 2px #d1d5db,
+        inset 0 0 0 3.5px #111827;
+      transition: all 0.06s ease;
+      user-select: none;
+    }
+    .vintage-key:active, .vintage-key.active-key {
+      transform: translateY(3px) scale(0.96);
+      box-shadow:
+        0 1px 2px rgba(0,0,0,0.9),
+        inset 0 0 0 2px #9ca3af,
+        inset 0 0 0 3.5px #000;
+    }
+    .gold-emboss {
+      color: #dfb76c;
+      text-shadow:
+        0 1px 1px rgba(0,0,0,0.9),
+        0 -1px 1px rgba(255,245,200,0.2),
+        0 0 8px rgba(212,175,55,0.3);
+    }
+    .custom-scroll::-webkit-scrollbar { width: 7px; }
+    .custom-scroll::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.05); }
+    .custom-scroll::-webkit-scrollbar-thumb { background: #c5ba9e; border-radius: 4px; }
+    .custom-scroll::-webkit-scrollbar-thumb:hover { background: #a39574; }
+  </style>
 </head>
-<body>
+<body class="min-h-screen text-stone-900 flex flex-col items-center justify-start p-2 sm:p-6 overflow-x-hidden select-text">
 
-<div class="demo-bar">Design preview. Highlighted items are details Matt still needs to provide.</div>
+  <div class="w-full max-w-4xl mx-auto flex flex-col items-center">
 
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="" width="74" height="45"><span class="brand__text"><span class="brand__kicker">Screenwriting Consultant</span> <span class="brand__name">Matt Tabak</span></span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
-    <nav class="nav" id="site-nav" aria-label="Main">
-      <a href="#services">Services</a>
-      <a href="#how">How it works</a>
-      <a href="about/">About</a>
-      <a href="blog/">Blog</a>
-      <a href="#faq">FAQ</a>
-      <a class="btn btn--primary" href="#submit">Get in touch</a>
-    </nav>
+    <div class="w-full relative flex flex-col items-center perspective-container">
+
+      <div class="w-[92%] sm:w-[94%] h-9 bg-gradient-to-b from-stone-900 to-stone-800 rounded-t-lg border-t border-stone-600 shadow-2xl flex items-center justify-between px-6 z-0">
+        <div class="flex items-center space-x-3 opacity-60">
+          <div class="h-2 w-16 bg-stone-700 border border-stone-500 rounded"></div>
+          <div class="text-[9px] tracking-widest text-stone-400 font-mono">10 · 20 · 30 · 40 · 50 · 60 · 70 · 80</div>
+        </div>
+        <div class="h-2 w-12 bg-stone-700 border border-stone-500 rounded opacity-60"></div>
+      </div>
+
+      <div class="w-full relative flex items-center justify-center z-10 -mt-2">
+        <div class="absolute -left-3 sm:-left-6 top-3 z-30 flex items-center cursor-pointer group" id="carriage-lever" title="Carriage Return (Click to Ring Bell & Scroll Top)">
+          <div class="w-5 sm:w-8 h-2 chrome-metal rounded-l"></div>
+          <div class="w-2.5 h-16 sm:h-20 chrome-metal rounded-t-full shadow-2xl transform -rotate-12 group-hover:-rotate-6 transition-transform"></div>
+          <div class="w-5 h-5 rounded-full bg-stone-800 border-2 border-stone-400 -ml-1.5 shadow-lg flex items-center justify-center text-[7px] text-stone-300 font-bold">BELL</div>
+        </div>
+
+        <div class="hidden sm:block absolute left-2 top-1 w-6 h-14 knurled-roller rounded-l-md border-y border-l border-stone-600 shadow-xl cursor-ns-resize" id="left-knob" title="Turn to scroll paper"></div>
+
+        <div class="hidden sm:block absolute right-2 top-1 w-6 h-14 knurled-roller rounded-r-md border-y border-r border-stone-600 shadow-xl cursor-ns-resize" id="right-knob" title="Turn to scroll paper"></div>
+
+        <div class="w-[90%] sm:w-[92%] h-12 bg-stone-950 rounded-md border-t-2 border-stone-700 shadow-2xl flex items-center justify-center relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-b from-stone-900 via-stone-950 to-black opacity-95"></div>
+          <div class="w-full h-1 bg-stone-800 opacity-40"></div>
+        </div>
+      </div>
+
+      <div class="w-[86%] sm:w-[88%] relative z-20 -mt-8">
+        <div class="paper-curve-sheet paper-texture rounded-t-sm border border-stone-300 relative overflow-hidden">
+
+          <div class="paper-top-shadow absolute inset-x-0 top-0 h-36 z-20"></div>
+
+          <div id="paper-viewport" class="custom-scroll max-h-[62vh] sm:max-h-[68vh] overflow-y-auto px-6 sm:px-14 md:px-20 pt-16 pb-28 text-stone-900 leading-relaxed text-sm sm:text-base relative z-10 selection:bg-amber-200">
+
+            <div class="max-w-2xl mx-auto space-y-7">
+
+              <div class="text-center pb-4 border-b border-stone-400">
+                <h1 class="text-xl sm:text-2xl font-bold tracking-widest text-stone-900">SCREENWRITING CONSULTANT</h1>
+                <p class="text-xs uppercase tracking-widest text-stone-600 mt-1">Home Page</p>
+              </div>
+
+              <div>
+                <h2 class="font-bold text-base sm:text-lg tracking-wider text-stone-950">THE WHO:</h2>
+                <div class="mt-2 space-y-3">
+                  <p>This is the website for Matt Tabak, screenwriting consultant.</p>
+                  <p>Matt is a writer/director/producer, a former studio executive, and an attorney.</p>
+                  <p>He has worn many hats in the business; he's been a part of the studio system, the indie world, and the streaming universe.</p>
+                  <p>Now for the first time he is offering his services to the public.</p>
+                  <p>If you want script notes, help with production issues, or assistance with legal, financial or career concerns you have come to the right place.</p>
+                </div>
+              </div>
+
+              <div class="bg-stone-200/50 p-4 border-l-4 border-stone-600 my-4">
+                <h2 class="font-bold text-base sm:text-lg tracking-wider text-stone-950">THE BRAG:</h2>
+                <div class="mt-2 space-y-2">
+                  <p>Entertainment Weekly Called Matt “The long lost Coen Brother.”</p>
+                  <p class="font-bold">Billy Bob Thornton: “Tabak gives some of the best notes in town.”</p>
+                </div>
+              </div>
+
+              <div>
+                <h2 class="font-bold text-base sm:text-lg tracking-wider text-stone-950">THE EXPERIENCE:</h2>
+                <div class="mt-2 space-y-3">
+                  <p>Currently, a Professor at Chapman University/Dodge Film School.</p>
+                  <p>Matt worked for Touchstone/Disney, Paramount and Warner Bros, and Jerry Bruckheimer.</p>
+                  <p>Developed the script 3000 which became “Pretty Woman” and coached Julia Roberts on her audition.</p>
+                  <p>He developed over 150 projects. Read over 2000 scripts.</p>
+                  <p>He hired and worked with hundreds of writers and directors including:</p>
+                  <p class="pl-4 border-l-2 border-stone-300 italic">
+                    JJ Abrams, Ang Lee, Brian Helgeland (LA CONFIDENTAIL, MYSTIC RIVER), Jeph Loeb (DAREDEVIL, COMMANDO), Tony Scott, Chris Keyser (PARTY OF FIVE and Chief WGA Negotiator), Jonathon Hensleigh (ARMAGEDDON) and Sidney Lumet and many others.
+                  </p>
+                  <p class="font-semibold pt-1">Other career notables:</p>
+                  <p>Discovered Andrew Kevin Walker (SEVEN) and gave him his first screenwriting job.</p>
+                  <p>As a studio executive, gave such good notes on a project that Jeffrey Katzenberg (CHAIRMAN, WALT DISNEY and DREAMWORKS) wanted him to rewrite the script.</p>
+                  <p>Bought the screenplay for “Face-Off” when every other studio had passed and developed the project.</p>
+                  <p>Worked as a writer in all genres from rom-coms to psychological thrillers to historical epics and biopics.</p>
+                  <p>Adapted Dostoyevsky's The Brothers Karamazov for Francis Coppola and Sony Pictures.</p>
+                  <p>Has written over 25 screenplays and pilots.</p>
+                  <p>Wrote and directed “Auggie Rose,” starring Jeff Goldblum and Anne Heche.</p>
+                  <p>Recently wrote and produced “The Other Zoey” for Amazon, a number one rom-com hit.</p>
+                  <p>Taught screenwriting at University of San Francisco. Given pitching seminars across the country.</p>
+                  <p>Was a transactional attorney on Wall Street and has advised numerous writers, directors and producers on deal making, contracts and strategy.</p>
+                  <p>WGA member for 30 years.</p>
+                </div>
+              </div>
+
+              <div>
+                <h2 class="font-bold text-base sm:text-lg tracking-wider text-stone-950">THE WHAT:</h2>
+                <div class="mt-2 space-y-3">
+                  <p>Are you struggling to get your next draft to another level?</p>
+                  <p>Are the notes you're getting from friends and reddit not elevating your material?</p>
+                  <p>Do you need advice on whether your idea is worth pursuing and/or how to tweak it?</p>
+                  <p>I won't just tell you “what's wrong” with your script, I will offer concrete solutions on how to fix it. It's what I've been doing for thirty years. Plus, I'm a writer, so I “get it.”</p>
+                  <p>Do you need help with a contract?</p>
+                  <p>Have a question about a producer's offer?</p>
+                  <p>Want assistance understanding the financial and/or legal intricacies of the business?</p>
+                  <p class="font-bold">I can help.</p>
+                </div>
+              </div>
+
+              <div class="bg-amber-50/70 p-4 border border-stone-300">
+                <h2 class="font-bold text-base sm:text-lg tracking-wider text-stone-950">THE NITTY GRITTY:</h2>
+                <div class="mt-3 space-y-4">
+                  <div>
+                    <p class="font-bold">SCREENPLAY NOTES: $600.00 (up to 120 page draft)</p>
+                    <p class="text-sm mt-1">Comprehensive reading of your draft. Plus a two-four phone call or zoom where we will discuss your project. I will provide detailed analysis, ideas, and constructive criticism. Hand written notes are not a part of this service. For scripts over 120 pages please contact me for a quote.</p>
+                  </div>
+                  <div>
+                    <p class="font-bold">TV PILOT NOTES: $400 (up to 65 pages)</p>
+                    <p class="text-sm mt-1">Comprehensive reading of your draft. Plus a two-three hour phone call or zoom where we will discuss your project. I will provide detailed analysis, ideas, and constructive criticism. Hand written notes are not a part of this service. For tv pilots over 65 pages please contact me for a quote.</p>
+                  </div>
+                  <div>
+                    <p class="font-bold">TREATMENT ANALYSIS: $350 (up to 10 pages)</p>
+                    <p class="text-sm mt-1">Comprehensive reading of your treatment. Plus a 1-2 hour phone call or zoom where I provide detailed analysis, ideas, and constructive criticism. Hand written notes are not a part of this service. For treatment over 10 pages please contact me for a quote.</p>
+                  </div>
+                  <div>
+                    <p class="font-bold">LOG-LINE/IDEA PUNCH UP: $175</p>
+                    <p class="text-sm mt-1">Send me your log line and in a 30 minute phone call/zoom I will assess it's viability and give suggestions.</p>
+                  </div>
+                  <div>
+                    <p class="font-bold">LEGAL/FINANCIAL/PRODUCTION CAREER HELP: $195 for first hour. $125 each additional hour.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h2 class="font-bold text-base sm:text-lg tracking-wider text-stone-950">THE MISC:</h2>
+                <div class="mt-2 space-y-3">
+                  <p>Matt lives in Hollywood with his teenage son, who learned at the age of two that for a story to be effective it needs conflict.</p>
+                  <p>IMDB link: <a href="https://www.imdb.com/name/nm0845860/?ref_=fn_all_nme_1" target="_blank" rel="noopener noreferrer" class="underline font-bold text-stone-900 hover:text-amber-900">https://www.imdb.com/name/nm0845860/?ref_=fn_all_nme_1</a></p>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-stone-400">
+                <h2 class="font-bold text-base sm:text-lg tracking-wider text-stone-950">THE CONTACT:</h2>
+                <div class="mt-2 space-y-2">
+                  <p>For more info and to get started please contact me at: <a href="mailto:Matt.screenwritingconsultant@gmail.com" class="font-bold underline text-stone-950 hover:text-amber-900">Matt.screenwritingconsultant@gmail.com</a></p>
+                  <p class="text-xs text-stone-500 pt-4">[ End of Document ]</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute -bottom-2 inset-x-2 h-4 flex items-center justify-between z-30 pointer-events-none px-4">
+          <div class="w-full h-1.5 chrome-metal rounded-full shadow-lg border border-stone-400 flex items-center justify-around">
+            <div class="w-3 h-3 bg-stone-900 rounded-sm border border-stone-600 shadow"></div>
+            <div class="w-3 h-3 bg-stone-900 rounded-sm border border-stone-600 shadow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full crinkle-enamel rounded-b-2xl border-x-4 border-b-8 border-stone-950 p-4 sm:p-6 shadow-2xl relative z-30 -mt-2">
+
+      <div class="max-w-xl mx-auto mb-4 bg-stone-950/80 rounded border border-stone-700/60 p-2.5 flex items-center justify-between shadow-inner">
+        <div class="flex items-center space-x-2">
+          <div class="w-4 h-4 rounded-full bg-red-900/60 border border-red-700/80"></div>
+          <span class="text-[9px] uppercase tracking-wider text-stone-400">Black/Red Ribbon</span>
+        </div>
+        <div class="flex space-x-1">
+          <div class="w-1 h-5 bg-stone-700"></div>
+          <div class="w-1 h-6 bg-stone-600"></div>
+          <div class="w-1.5 h-7 chrome-metal rounded-t"></div>
+          <div class="w-1 h-6 bg-stone-600"></div>
+          <div class="w-1 h-5 bg-stone-700"></div>
+        </div>
+        <div class="text-right">
+          <button id="btn-scroll-top" class="text-[10px] uppercase font-bold text-amber-500 hover:text-amber-400 tracking-wider">▲ Top of Page</button>
+        </div>
+      </div>
+
+      <div class="text-center my-3 border-y border-amber-900/30 py-2">
+        <div class="text-[10px] tracking-[0.3em] font-mono gold-emboss uppercase">SCREENWRITINGCONSULTANT.COM</div>
+        <div class="text-2xl sm:text-3xl tracking-widest font-serif gold-emboss uppercase font-bold" style="font-family: 'Rye', serif;">MATT TABAK</div>
+      </div>
+
+      <div class="max-w-xl mx-auto flex flex-col items-center space-y-2 mt-4 pt-3 bg-stone-950/60 p-3 sm:p-4 rounded-xl border border-stone-800 shadow-inner">
+        <div class="flex justify-center space-x-1.5 sm:space-x-2">
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="Q">Q</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="W">W</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="E">E</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="R">R</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="T">T</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="Y">Y</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="U">U</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="I">I</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="O">O</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="P">P</div>
+        </div>
+        <div class="flex justify-center space-x-1.5 sm:space-x-2">
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="A">A</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="S">S</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="D">D</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="F">F</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="G">G</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="H">H</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="J">J</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="K">K</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="L">L</div>
+        </div>
+        <div class="flex justify-center space-x-1.5 sm:space-x-2">
+          <div class="vintage-key w-8 h-7 sm:w-12 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-700 text-[10px] cursor-pointer" data-key="SHIFT">SHIFT</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="Z">Z</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="X">X</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="C">C</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="V">V</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="B">B</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="N">N</div>
+          <div class="vintage-key w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-800 text-xs cursor-pointer" data-key="M">M</div>
+          <div class="vintage-key w-8 h-7 sm:w-12 sm:h-10 rounded-full flex items-center justify-center font-bold text-stone-700 text-[10px] cursor-pointer" data-key="RETURN">RETURN</div>
+        </div>
+        <div class="pt-2 w-full flex justify-center">
+          <div id="spacebar" class="w-48 sm:w-72 h-7 sm:h-8 bg-gradient-to-b from-stone-800 to-stone-950 rounded border-2 border-stone-600 shadow-xl cursor-pointer hover:border-amber-600/70 active:translate-y-1 transition-all flex items-center justify-center text-[10px] tracking-widest text-stone-400 font-mono">
+            SPACE • ADVANCE
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</header>
 
-<main>
+  <script>
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    let audioCtx = null;
 
-  <section class="wrap hero">
-    <div class="hero__copy">
-      <p class="label">Script consultant: former studio executive, WGA writer and attorney</p>
-      <h1>Notes from the executive who bought <em>Face/Off</em> when every other studio passed.</h1>
-      <p class="lede">Thirty years developing, buying and writing movies at Disney, Paramount and Warner Bros. I won't just tell you what's wrong with your script. I'll tell you how to fix it.</p>
-      <div class="hero__actions">
-        <a class="btn btn--primary btn--lg" href="#submit">Tell me about your project</a>
-        <a class="btn btn--ghost btn--lg" href="#services">See services &amp; rates</a>
-      </div>
-    </div>
-    <div class="hero__photo">
-      <figure>
-        <img src="https://screenwritingconsultant.com/wp-content/uploads/2025/06/Matt-Tabac-Portrait-768x1024.jpg" alt="Matt Tabak, script consultant and former studio executive" width="768" height="1024">
-        <figcaption>Matt Tabak</figcaption>
-      </figure>
-    </div>
-  </section>
+    function initAudio() {
+      if (!audioCtx) {
+        audioCtx = new AudioContext();
+      }
+    }
 
-  <section class="quote-band">
-    <div class="wrap">
-      <blockquote>“The long-lost Coen Brother.”</blockquote>
-      <cite>Entertainment Weekly, on his feature directorial debut, <em>Auggie Rose</em></cite>
-      <p class="aside">Joel and Ethan have not yet invited him to dinner.</p>
-    </div>
-  </section>
+    function playKeyClick() {
+      initAudio();
+      if (!audioCtx) return;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(320 + Math.random() * 120, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.05);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.05);
+    }
 
-  <section class="section marquee" aria-labelledby="track-record">
-    <div class="wrap">
-      <div class="section-head">
-        <h2 id="track-record">The track record</h2>
-        <p><a href="https://www.imdb.com/name/nm0845860/">Full credits on IMDb</a></p>
-      </div>
-      <div class="titlecards">
-        <article class="titlecard">
-          <p class="titlecard__role">Developed · Touchstone/Disney</p>
-          <h3 class="titlecard__title">Pretty Woman</h3>
-          <p class="titlecard__note">Developed the script, then titled <em>3000</em>, and coached Julia Roberts on her audition.</p>
-        </article>
-        <article class="titlecard">
-          <p class="titlecard__role">Bought &amp; developed</p>
-          <h3 class="titlecard__title">Face/Off</h3>
-          <p class="titlecard__note">Bought the screenplay when every other studio passed.</p>
-        </article>
-        <article class="titlecard">
-          <p class="titlecard__role">Discovered the writer</p>
-          <h3 class="titlecard__title">Se7en</h3>
-          <p class="titlecard__note">Gave Andrew Kevin Walker his first screenwriting job.</p>
-        </article>
-        <article class="titlecard">
-          <p class="titlecard__role">Wrote &amp; produced · 2023</p>
-          <h3 class="titlecard__title">The Other Zoey</h3>
-          <p class="titlecard__note">Romantic comedy for Amazon. <span class="tbd">Source for chart claim</span></p>
-        </article>
-      </div>
-      <p class="credits-note">Worked with J.J. Abrams, Ang Lee, Tony Scott, Sidney Lumet, Brian Helgeland, Jonathan Hensleigh and hundreds of other writers and directors at Touchstone/Disney, Paramount, Warner Bros. and Jerry Bruckheimer.</p>
-      <div class="filmography">
-        <h3 class="filmography__head">Produced credits as writer</h3>
-        <ul>
-          <li><span>2023</span><em>The Other Zoey</em><small>Writer, producer</small></li>
-          <li><span>2016</span><em>Manson's Lost Girls</em><small>Writer</small></li>
-          <li><span>2012</span><em>666 Park Avenue</em><small>Writer, 1 episode</small></li>
-          <li><span>2004</span><em>Plain Truth</em><small>Teleplay</small></li>
-          <li><span>2003</span><em>Every Breath You Take</em><small>Writer, director</small></li>
-          <li><span>2003</span><em>The Stranger Beside Me</em><small>Teleplay</small></li>
-          <li><span>2002</span><em>Point of Origin</em><small>Writer</small></li>
-          <li><span>2002</span><em>Obsessed</em><small>Writer</small></li>
-          <li><span>2000</span><em>Auggie Rose</em> / <em>Beyond Suspicion</em><small>Writer, director</small></li>
-          <li><span>1994</span><em>The Investigator</em><small>Writer, director</small></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    function playBell() {
+      initAudio();
+      if (!audioCtx) return;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(2200, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.9);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.9);
+    }
 
-  <section id="about" class="section section--alt">
-    <div class="wrap">
-      <h2 style="max-width: 20ch">Most consultants have one vantage point. You get three.</h2>
-      <div class="triad">
-        <div><h3>The executive</h3><p>Developed 150+ projects and read over 2,000 scripts at the studios. I know what makes a buyer say yes, because I was the buyer.</p></div>
-        <div><h3>The writer</h3><p>WGA member for 30 years with 25+ screenplays and pilots, from rom-coms to historical epics. Adapted <em>The Brothers Karamazov</em> for Francis Coppola. I know what a rewrite actually costs you.</p></div>
-        <div><h3>The dealmaker</h3><p>Former Wall Street transactional attorney who has advised writers, directors and producers on offers, contracts and strategy.</p></div>
-      </div>
-      <p class="triad-foot"><a href="about/">Full background and credits</a>. Lecturer at Chapman University's Dodge College of Film and Media Arts. Lives in Hollywood with his teenage son, who learned at two that a story needs conflict.</p>
-    </div>
-  </section>
+    const viewport = document.getElementById('paper-viewport');
 
-  <section id="services" class="wrap section">
-    <div class="section-head">
-      <h2>Screenplay notes &amp; rates</h2>
-      <p>Every service includes a live conversation by Zoom or phone.</p>
-    </div>
-    <div class="services">
-      <article class="service service--featured">
-        <p class="label">Most requested</p>
-        <h3>Feature screenplay notes</h3>
-        <p class="price">$600</p>
-        <p>A full read of your draft (up to 120 pages), then a 2–4 hour call covering structure, character, scene work and concrete fixes. Turnaround: <span class="tbd">X business days</span></p>
-        <a class="btn btn--primary" href="#submit">Ask about feature notes</a>
-      </article>
-      <article class="service">
-        <p class="label">Television</p>
-        <h3>TV pilot notes</h3>
-        <p class="price">$400</p>
-        <p>A full read of your pilot (up to 65 pages), then a 2–3 hour call on the pilot, the series engine and the world. Turnaround: <span class="tbd">X business days</span></p>
-        <a class="btn btn--ghost" href="#submit">Ask about pilot notes</a>
-      </article>
-      <article class="service">
-        <p class="label">Before you write</p>
-        <h3>Treatment analysis</h3>
-        <p class="price">$350</p>
-        <p>A full read of your treatment (up to 10 pages), then a 1–2 hour call before you commit months to a draft. Turnaround: <span class="tbd">X business days</span></p>
-        <a class="btn btn--ghost" href="#submit">Ask about treatment analysis</a>
-      </article>
-    </div>
-    <div class="services-mini">
-      <div class="service-row">
-        <div><h3>Logline &amp; idea punch-up</h3><p>A 30-minute call on whether the idea has legs, and how to sharpen it.</p></div>
-        <p class="price">$175</p>
-      </div>
-      <div class="service-row">
-        <div><h3>Career, deal &amp; production advice</h3><p>Offers, contracts, financing and strategy. $125 each additional hour.</p></div>
-        <p class="price">$195 <small>first hour</small></p>
-      </div>
-    </div>
-    <p class="services-foot">Longer drafts? Ask for a quote. Written notes are available as an add-on for <span class="tbd">price</span>.</p>
-  </section>
+    document.querySelectorAll('.vintage-key').forEach(key => {
+      key.addEventListener('click', () => {
+        playKeyClick();
+        viewport.scrollBy({ top: 35, behavior: 'smooth' });
+      });
+    });
 
-  <section id="how" class="section section--alt">
-    <div class="wrap">
-      <h2>How it works</h2>
-      <ol class="steps">
-        <li><h3>Get in touch</h3><p>Tell me about the project in a few lines. Please don't send pages yet.</p></li>
-        <li><h3>Agree and book</h3><p>If it's a fit, you accept the submission release, pay, and only then send your material.</p></li>
-        <li><h3>Matt reads</h3><p>Every page, personally. No readers, no assistants.</p></li>
-        <li><h3>The notes call</h3><p>An in-depth session by Zoom or phone. Record it, ask anything, and leave with a plan.</p></li>
-      </ol>
-    </div>
-  </section>
+    const spacebar = document.getElementById('spacebar');
+    if (spacebar) {
+      spacebar.addEventListener('click', () => {
+        playKeyClick();
+        viewport.scrollBy({ top: 75, behavior: 'smooth' });
+      });
+    }
 
-  <section class="wrap section">
-    <blockquote class="big-quote">“Tabak gives some of the best notes in town.”</blockquote>
-    <p class="big-quote-cite">Billy Bob Thornton</p>
-    <div class="testimonials">
-      <blockquote class="testimonial"><p><span class="tbd">Client testimonial</span> Ideally a concrete result: a fellowship placement, a rep signed, a sale, a staffing job.</p><footer>Name, credit or result</footer></blockquote>
-      <blockquote class="testimonial"><p><span class="tbd">Client testimonial</span> Ideally a concrete result: a fellowship placement, a rep signed, a sale, a staffing job.</p><footer>Name, credit or result</footer></blockquote>
-    </div>
-  </section>
+    const carriageLever = document.getElementById('carriage-lever');
+    if (carriageLever) {
+      carriageLever.addEventListener('click', () => {
+        playBell();
+        viewport.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
 
-  <section class="wrap section" aria-labelledby="from-blog">
-    <div class="section-head">
-      <h2 id="from-blog">From the blog</h2>
-      <p><a href="blog/">All posts</a></p>
-    </div>
-    <div class="post-grid post-grid--home">
-      <article class="post-card">
-        <p class="label">The idea</p>
-        <h3><a href="blog/how-to-write-a-logline/">How to write a logline: what a studio exec reads first</a></h3>
-        <p>One sentence decides whether your script gets opened. How long it should be, what goes in it, and what to leave out.</p>
-      </article>
-      <article class="post-card">
-        <p class="label">Treatments &amp; outlines</p>
-        <h3>How to write a film treatment that gets read <span class="soon">Soon</span></h3>
-        <p>Length, tone and what to leave out, from someone who read hundreds of them at the studios.</p>
-      </article>
-      <article class="post-card">
-        <p class="label">Structure</p>
-        <h3>Three-act structure examples from films I worked on <span class="soon">Soon</span></h3>
-        <p>How <em>Face/Off</em> and <em>Pretty Woman</em> actually break down, and why structure is a diagnosis, not a formula.</p>
-      </article>
-    </div>
-  </section>
+    const scrollTopBtn = document.getElementById('btn-scroll-top');
+    if (scrollTopBtn) {
+      scrollTopBtn.addEventListener('click', () => {
+        playBell();
+        viewport.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
 
-  <section id="faq" class="section section--alt">
-    <div class="wrap faq">
-      <h2>Questions</h2>
-      <div>
-        <details open>
-          <summary>Do I get written notes?</summary>
-          <p>Not by default. The core of every service is the live call, where we can dig into your questions in real time. You're welcome to record it. Written notes are available as an add-on.</p>
-        </details>
-        <details>
-          <summary>How long does it take?</summary>
-          <p>Feature reads are typically <span class="tbd">X business days</span> from payment. Rush service is available for <span class="tbd">price</span>.</p>
-        </details>
-        <details>
-          <summary>Can I just send you my script?</summary>
-          <p>Please don't. Start with a short inquiry. If we're a fit, you'll accept the <a href="release/">submission release</a> and book the service, and then you send your material. It protects both of us.</p>
-        </details>
-        <details>
-          <summary>Is my script kept confidential?</summary>
-          <p>Yes. I don't share or pitch your material to anyone without your written permission, and you keep all rights to it. The terms are set out in the <a href="release/">submission release</a> you accept before sending pages.</p>
-        </details>
-        <details>
-          <summary>Is contract help the same as legal representation?</summary>
-          <p><span class="tbd">Scope and licensure statement</span> To be confirmed with Matt before publishing.</p>
-        </details>
-      </div>
-    </div>
-  </section>
+    const leftKnob = document.getElementById('left-knob');
+    const rightKnob = document.getElementById('right-knob');
+    [leftKnob, rightKnob].forEach(knob => {
+      if (knob) {
+        knob.addEventListener('click', () => {
+          playKeyClick();
+          viewport.scrollBy({ top: 60, behavior: 'smooth' });
+        });
+      }
+    });
 
-  <section id="submit" class="wrap section submit">
-    <div>
-      <h2>Ready for the next draft?</h2>
-      <p class="lede">Tell me about your project. I'll reply within one business day about fit and timing. Please don't attach or paste script pages here; those come after you've accepted the <a href="release/">submission release</a>.</p>
-      <p class="muted" style="margin-top: 20px; font-size: 16px">Or email <a href="mailto:matt@screenwritingconsultant.com">matt@screenwritingconsultant.com</a> <span class="tbd">set up address</span></p>
-    </div>
-    <form class="form" data-demo="Demo only: on the live site this sends your inquiry to Matt.">
-      <div class="form-row">
-        <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
-        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-      </div>
-      <div class="field">
-        <label for="service">Service you're interested in</label>
-        <select id="service" name="service">
-          <option>Feature screenplay notes: $600</option>
-          <option>TV pilot notes: $400</option>
-          <option>Treatment analysis: $350</option>
-          <option>Logline &amp; idea punch-up: $175</option>
-          <option>Career, deal &amp; production advice</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="format">Project</label>
-        <select id="format" name="format">
-          <option>Feature screenplay</option>
-          <option>TV pilot</option>
-          <option>Treatment or idea</option>
-          <option>Contract, deal or career question</option>
-        </select>
-      </div>
-      <div class="field"><label for="message">A few lines about the project and where you're stuck</label><textarea id="message" name="message" rows="4" placeholder="Genre, draft number, what kind of help you want. No script pages, please."></textarea></div>
-      <label class="check"><input type="checkbox" name="agree" required> <span>I've read the <a href="terms/">terms</a> and <a href="privacy/">privacy policy</a>.</span></label>
-      <button class="btn btn--primary btn--lg" type="submit">Send inquiry</button>
-      <p class="form-status" role="status"></p>
-    </form>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="" width="74" height="45"><span class="brand__text"><span class="brand__kicker">Screenwriting Consultant</span> <span class="brand__name">Matt Tabak</span></span></a>
-    <nav aria-label="Footer">
-      <a href="about/">About</a>
-      <a href="https://www.imdb.com/name/nm0845860/">IMDb</a>
-      <a href="blog/">Blog</a>
-      <a href="#faq">FAQ</a>
-      <a href="#submit">Contact</a>
-      <a href="privacy/">Privacy</a>
-      <a href="terms/">Terms</a>
-      <a href="release/">Submission release</a>
-    </nav>
-    <p>© <span data-year>2026</span> Screenwriting Consultant</p>
-  </div>
-</footer>
-
-<script src="assets/js/main.js"></script>
+    window.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      playKeyClick();
+      const pressed = e.key.toUpperCase();
+      const keyElem = document.querySelector(`.vintage-key[data-key="${pressed}"]`);
+      if (keyElem) {
+        keyElem.classList.add('active-key');
+        setTimeout(() => keyElem.classList.remove('active-key'), 100);
+      }
+    });
+  </script>
 </body>
 </html>
