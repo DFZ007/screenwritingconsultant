@@ -1,0 +1,5 @@
+# For the live site. The GitHub preview also sets noindex on every page.
+User-agent: *
+Allow: /
+
+Sitemap: https://screenwritingconsultant.com/sitemap.xml
