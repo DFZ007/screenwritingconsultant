@@ -54,15 +54,17 @@ document.querySelectorAll('[data-year]').forEach((el) => (el.textContent = new D
     slides.forEach((s, k) => { s.classList.toggle('is-active', k === i); s.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
     dots.forEach((d, k) => d.setAttribute('aria-current', k === i ? 'true' : 'false'));
   }
-  function start() { stop(); if (!reduce) timer = setInterval(() => show(i + 1), 4000); }
-  function stop() { clearInterval(timer); timer = null; }
+  function start(first) {
+    stop();
+    if (reduce) return;
+    timer = setTimeout(function tick() { show(i + 1); timer = setTimeout(tick, 4000); }, first ? 2500 : 4000);
+  }
+  function stop() { clearTimeout(timer); timer = null; }
   dots.forEach((d, k) => d.addEventListener('click', () => { show(k); start(); }));
-  root.addEventListener('mouseenter', stop);
-  root.addEventListener('mouseleave', start);
   root.addEventListener('focusin', stop);
   root.addEventListener('focusout', start);
   show(0);
-  start();
+  start(true);
 })();
 
 // Black & white to color, linked to scroll position
@@ -77,8 +79,13 @@ document.querySelectorAll('[data-year]').forEach((el) => (el.textContent = new D
       const r = img.getBoundingClientRect();
       if (r.bottom < 0 || r.top > vh) return;
       // 0 when the image's top enters at the bottom of the screen, 1 when its center reaches the middle
-      const center = r.top + r.height / 2;
-      const p = Math.min(1, Math.max(0, (vh - r.top) / (vh - vh / 2 + r.height / 2)));
+      // Fully black and white until the image's top passes 85% of the screen height;
+      // fully in color once its center reaches 40% of the screen height. Eased so it stays grayer longer.
+      const startTop = vh * 0.85;
+      const endTop = vh * 0.4 - r.height / 2;
+      let p = (startTop - r.top) / (startTop - endTop);
+      p = Math.min(1, Math.max(0, p));
+      p = p * p;
       img.style.filter = 'grayscale(' + (1 - p).toFixed(3) + ')';
     });
     ticking = false;

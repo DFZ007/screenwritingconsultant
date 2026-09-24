@@ -823,3 +823,5 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 /* Matt's portrait: classic high-contrast black and white */
 .hero__photo img, .byline img, .author img { filter: grayscale(1) contrast(1.32) brightness(1.06); }
 .hero__photo img, .byline img, .author img { filter: grayscale(1) contrast(1.22) brightness(0.95); }
+.quote-hero { background-position: center, center 78%; }
+.quote-hero { background-image: linear-gradient(180deg, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.56) 50%, rgba(0,0,0,0.5) 100%), url(../img/hero-typewriter.jpg); background-size: cover, cover; background-repeat: no-repeat; }
