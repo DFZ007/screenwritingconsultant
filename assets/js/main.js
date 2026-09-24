@@ -64,3 +64,28 @@ document.querySelectorAll('[data-year]').forEach((el) => (el.textContent = new D
   show(0);
   start();
 })();
+
+// Black & white to color, linked to scroll position
+(function () {
+  const imgs = [...document.querySelectorAll('.titlecard__poster, .fp img, .teach-photo__img img')];
+  if (!imgs.length) return;
+  document.documentElement.classList.add('bw-scroll');
+  let ticking = false;
+  function update() {
+    const vh = window.innerHeight;
+    imgs.forEach((img) => {
+      const r = img.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      // 0 when the image's top enters at the bottom of the screen, 1 when its center reaches the middle
+      const center = r.top + r.height / 2;
+      const p = Math.min(1, Math.max(0, (vh - r.top) / (vh - vh / 2 + r.height / 2)));
+      img.style.filter = 'grayscale(' + (1 - p).toFixed(3) + ')';
+    });
+    ticking = false;
+  }
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('hashchange', () => setTimeout(update, 50));
+  update();
+})();

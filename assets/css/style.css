@@ -615,3 +615,211 @@ a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .egg--block.egg-img img { height: 100%; }
 .egg-ticket.egg--inline { height: 1.3em; vertical-align: -0.25em; }
 .what__answer .egg-megaphone { height: 1.2em; vertical-align: -0.2em; }
+
+/* Color photos: start black & white, turn color as they scroll into view */
+.bw-ready .titlecard__poster,
+.bw-ready .fp img { filter: grayscale(1) contrast(1.05); transition: filter 1.4s ease; }
+.bw-ready .titlecard__poster.is-color,
+.bw-ready .fp img.is-color { filter: none; }
+@media (prefers-reduced-motion: reduce) {
+  .bw-ready .titlecard__poster, .bw-ready .fp img { transition-duration: 0.3s; }
+}
+
+/* Uniform size for all woodcut illustrations: same bounding box, image fits inside */
+.egg.egg-img, .egg--inline.egg-img, .egg--block.egg-img,
+.egg-ticket.egg--inline, .what__answer .egg-megaphone {
+  width: 96px; height: 76px; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;
+}
+.egg-img img { width: 100%; height: 100%; object-fit: contain; }
+.egg--inline.egg-img { margin-left: 18px; }
+.egg--block.egg-img { display: flex; justify-content: flex-start; margin-top: 36px; }
+.egg--block.egg-img img { object-position: left center; }
+@media (max-width: 600px) {
+  .egg.egg-img, .egg--inline.egg-img, .egg--block.egg-img, .egg-ticket.egg--inline, .what__answer .egg-megaphone { width: 72px; height: 58px; }
+}
+
+/* ---------- Accent: subdued antique gold ---------- */
+:root { --gold: #B89A5E; --gold-hover: #A6874B; --gold-ink: #7E6331; --gold-tint: #F7F2E8; }
+.btn--primary { background: var(--gold); color: #111111; }
+.btn--primary:hover { background: var(--gold-hover); color: #111111; }
+.eyebrow { color: var(--gold-ink); }
+.steps li::before { color: var(--gold-ink); }
+.service--featured { border-color: var(--gold); background: var(--gold-tint); }
+.service--featured .label { color: var(--gold-ink); }
+.nav a[aria-current="page"] { box-shadow: 0 1px 0 var(--gold); }
+.qh-dot[aria-current="true"]::before { background: var(--gold); }
+.titlecard__role { color: var(--gold-ink); }
+.what__answer { color: var(--gold-ink); }
+.band .post-grid--home .post-card { border-top-color: var(--gold); }
+.chip[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: #111111; }
+.check input { accent-color: var(--gold-hover); }
+.field input:focus, .field select:focus, .field textarea:focus { outline-color: var(--gold); border-color: var(--gold); }
+:focus-visible { outline-color: var(--gold-hover); }
+.section-head .eyebrow { color: var(--gold-ink); font-size: 13px; }
+
+/* Gold buttons with white text: deeper gold so white text stays readable */
+:root { --gold-btn: #8E6F37; --gold-btn-hover: #775B2A; }
+.btn--primary, .btn--primary:hover, .nav .btn--primary { color: #FFFFFF; }
+.btn--primary { background: var(--gold-btn); }
+.btn--primary:hover { background: var(--gold-btn-hover); }
+.chip[aria-pressed="true"] { background: var(--gold-btn); border-color: var(--gold-btn); color: #FFFFFF; }
+
+/* Gold matched to reference: #EED37F, black text */
+:root { --gold: #EED37F; --gold-hover: #E3C46A; --gold-tint: #FBF6E6; }
+.btn--primary, .nav .btn--primary { background: var(--gold); color: #111111; }
+.btn--primary:hover { background: var(--gold-hover); color: #111111; }
+.chip[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: #111111; }
+.service--featured { border-color: #D9B95E; background: var(--gold-tint); }
+.band .post-grid--home .post-card { border-top-color: #D9B95E; }
+:root { --gold: #D9AE4A; --gold-hover: #C99C38; }
+.service--featured { border-color: var(--gold); }
+.band .post-grid--home .post-card { border-top-color: var(--gold); }
+:root { --gold: #E4B93C; --gold-hover: #D6AA2C; }
+
+/* ---------- "The who" section redesign ---------- */
+.who__lead { font-family: var(--display); font-size: clamp(26px, 2.6vw, 36px); line-height: 1.2; margin-top: 20px; max-width: 30ch; }
+.who__lede { margin-top: 14px; }
+.stats { list-style: none; padding: 0; margin: 40px 0 8px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--card-line); border-bottom: 1px solid var(--card-line); }
+.stats li { padding: 22px 16px; display: flex; flex-direction: column; gap: 4px; }
+.stats li + li { border-left: 1px solid var(--card-line); }
+.stats strong { font-family: var(--display); font-weight: 400; font-size: clamp(34px, 3.6vw, 48px); line-height: 1; color: #111; }
+.stats span { font-size: 14px; color: var(--muted); }
+@media (max-width: 700px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .stats li:nth-child(3) { border-left: none; } .stats li:nth-child(n+3) { border-top: 1px solid var(--card-line); } }
+
+#about .triad { margin-top: 40px; }
+#about .triad > .triad__card { background: #FFFFFF; border: 1px solid var(--card-line); border-top: 3px solid var(--gold); border-radius: 4px; padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+#about .triad__card h3 { font-family: var(--display); font-size: 26px; color: #111; margin: 0; }
+.triad__icon { width: 44px; height: 44px; color: var(--gold-ink); display: block; }
+.triad__icon svg { width: 100%; height: 100%; display: block; }
+#about .triad__card p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--text-2); }
+#about .triad__card .triad__pull { font-family: var(--display); font-style: italic; font-size: 19px; line-height: 1.4; color: #111; padding-top: 12px; border-top: 1px solid var(--card-line); margin-top: auto; }
+#about { background: var(--band); }
+
+.who__foot { margin-top: 32px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.who__foot p { margin: 0; background: #FFFFFF; border: 1px solid var(--card-line); border-radius: 4px; padding: 20px 24px; font-size: 15px; line-height: 1.6; color: var(--text-3); }
+.who__son { font-family: var(--display); font-style: italic; font-size: 18px !important; color: #111 !important; }
+.who__cta { margin-top: 28px; font-size: 16px; color: var(--text-3); max-width: 70ch; }
+@media (max-width: 800px) { .who__foot { grid-template-columns: 1fr; } }
+#about { background: #FFFFFF; }
+.who__foot p { background: var(--band); border-color: transparent; }
+
+/* Teaching card with Chapman photo */
+.teach-card { margin: 0; background: var(--band); border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; }
+.teach-card__img { aspect-ratio: 16 / 7; background: #E9E9E5; display: flex; align-items: center; justify-content: center; }
+.teach-card__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.teach-card figcaption { padding: 18px 24px 16px; }
+.who__foot .teach-card__text { background: none; border: none; padding: 0; }
+.teach-card__credit { display: block; margin-top: 8px; font-size: 12px; color: var(--muted); }
+.who__foot { align-items: start; }
+
+/* who__foot: photo left, teaching + son + CTA right */
+.who__foot { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 28px; align-items: stretch; margin-top: 32px; }
+.teach-photo { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.teach-photo__img { flex: 1; min-height: 300px; border-radius: 4px; overflow: hidden; background: #E9E9E5; display: flex; align-items: center; justify-content: center; }
+.teach-photo__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.teach-photo figcaption { font-size: 12px; color: var(--muted); }
+.who__side { display: flex; flex-direction: column; gap: 16px; }
+.who__foot .who__side p { margin: 0; }
+.who__foot .who__teach { background: var(--band); border-radius: 4px; padding: 20px 24px; font-size: 15px; line-height: 1.6; color: var(--text-3); border: none; }
+.who__foot .who__son { background: var(--band); border-radius: 4px; padding: 20px 24px; border: none; }
+.who__foot .who__cta { background: none; border: none; padding: 4px 0 0; margin: 0; font-size: 15px; color: var(--text-3); }
+@media (max-width: 800px) { .who__foot { grid-template-columns: 1fr; } .teach-photo__img { min-height: 220px; } }
+
+/* Hero H1: calmer so it doesn't compete with the quote hero */
+.hero h1 { font-size: clamp(32px, 3.5vw, 50px); line-height: 1.14; letter-spacing: -0.005em; max-width: 19ch; }
+.hero h1 em { color: var(--gold-ink); }
+.hero__copy { gap: 22px; }
+.hero .lede { font-size: clamp(17px, 1.4vw, 19px); }
+.hero h1 { max-width: 22ch; }
+.hero h1 { max-width: 24ch; text-wrap: balance; }
+.bw-ready .teach-photo__img img { filter: grayscale(1) contrast(1.05); transition: filter 1.4s ease; }
+.bw-ready .teach-photo__img img.is-color { filter: none; }
+.teach-photo__img img { object-position: center 60%; }
+:root { --gold: #E1BE5A; --gold-hover: #D4AE45; }
+.qh-slide figcaption { color: var(--gold); letter-spacing: 0.02em; }
+.qh-slide figcaption .qh-aside { color: rgba(255, 255, 255, 0.75); letter-spacing: 0; }
+
+/* WGA member text badge + hero trust line */
+.wga-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--sans); font-size: 11.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #111; padding: 7px 12px; border: 1px solid var(--gold); border-radius: 2px; background: #FFFDF6; line-height: 1; white-space: nowrap; }
+.wga-badge--sm { align-self: flex-start; font-size: 10.5px; padding: 6px 10px; }
+.trust { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; font-size: 14px; color: var(--muted); }
+.trust li { display: flex; align-items: center; }
+.trust li + li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--gold); margin-right: 18px; }
+
+/* ================= Typography pass ================= */
+:root { --serif-text: 'Libre Caslon Text', Georgia, serif; }
+body { font-feature-settings: "kern", "liga"; text-rendering: optimizeLegibility; }
+
+/* Headings: tighter, italic accents in gold-ink */
+.section h2, .hero h1, .about-head h1, .blog-head h1 { letter-spacing: -0.015em; }
+.section h2 { font-size: clamp(38px, 4vw, 58px); line-height: 1.02; }
+h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
+.amp { font-family: var(--display); font-style: italic; color: var(--gold-ink); }
+
+/* Eyebrows: small caps with a gold rule */
+.eyebrow { display: inline-flex; align-items: center; gap: 12px; font-size: 12px; letter-spacing: 0.22em; font-weight: 600; }
+.eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
+
+/* Editorial serif for ledes and long-form paragraphs; sans stays for UI */
+.lede, .who__lede, .hero .lede { font-family: var(--serif-text); font-size: clamp(17px, 1.35vw, 19px); line-height: 1.65; color: var(--text-2); }
+.who__lead { font-size: clamp(30px, 3vw, 42px); letter-spacing: -0.01em; }
+.who__lead::first-letter { color: var(--gold-ink); }
+.credits-note { font-family: var(--serif-text); font-size: 17px; line-height: 1.75; color: var(--text-3); }
+.titlecard__note, #about .triad__card p, .service p, .steps p, .what__list li { hyphens: manual; }
+
+/* Card and service titles in the display serif */
+.service h3, .service-row h3, .steps h3 { font-family: var(--display); font-weight: 400; letter-spacing: -0.005em; }
+.service h3 { font-size: 30px; }
+.service-row h3 { font-size: 24px; }
+.steps h3 { font-size: 24px; margin-top: 4px; }
+.price { font-variant-numeric: lining-nums; letter-spacing: -0.02em; }
+.stats strong { font-variant-numeric: lining-nums; letter-spacing: -0.02em; }
+
+/* Numbers in How it works: large italic serif */
+.steps li::before { font-style: italic; font-size: 64px; }
+
+/* FAQ questions in serif */
+.faq summary { font-family: var(--display); font-weight: 400; font-size: 23px; letter-spacing: -0.005em; }
+
+/* Filmography and nominations */
+.filmography li em { font-family: var(--display); font-size: 19px; }
+.honors__award { font-size: 24px; }
+
+/* Labels on title cards: small caps */
+.titlecard__role { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; }
+.titlecard__title { font-size: clamp(30px, 2.6vw, 38px); }
+
+/* Blog cards */
+.post-card h3 { letter-spacing: -0.01em; }
+.post-card .label { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--gold-ink); }
+
+/* Pull quotes and asides */
+#about .triad__card .triad__pull { font-size: 20px; }
+.who__son { font-size: 20px !important; line-height: 1.45; }
+
+/* Paragraph measure */
+.section p { max-width: 68ch; }
+.who__lead::first-letter { color: inherit; }
+.hero .label, .filmography__head, .what__list li.what__label, .brand__kicker { letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; font-size: 11.5px; }
+.hero .label, .filmography__head, .what__list li.what__label { color: var(--gold-ink); font-family: var(--sans); }
+.brand__kicker { font-weight: 500; font-size: 10px; }
+@media (max-width: 900px) { .brand__kicker { font-size: 8.5px; letter-spacing: 0.18em; } }
+
+/* "Worked with" names grid */
+.people { margin-top: 48px; }
+.people__intro { font-family: var(--serif-text); font-size: 18px; color: var(--text-2); margin: 0 0 18px; }
+.people__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--card-line); }
+.people__grid li { padding: 18px 16px 18px 0; border-bottom: 1px solid var(--card-line); display: flex; flex-direction: column; gap: 4px; }
+.people__name { font-family: var(--display); font-size: 24px; line-height: 1.15; color: #111; }
+.people__credit { font-size: 13px; color: var(--gold-ink); line-height: 1.4; }
+.people__credit em { font-style: italic; }
+.people__outro { font-family: var(--display); font-style: italic; font-size: 20px; color: var(--muted); margin: 14px 0 0; }
+@media (max-width: 900px) { .people__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Scroll-linked B&W to color: JS sets the grayscale amount; no delay */
+.bw-scroll .titlecard__poster, .bw-scroll .fp img, .bw-scroll .teach-photo__img img { filter: grayscale(1); transition: filter 0.08s linear; }
+.bw-ready .titlecard__poster, .bw-ready .fp img, .bw-ready .teach-photo__img img { transition: filter 0.08s linear; }
+
+/* Matt's portrait: classic high-contrast black and white */
+.hero__photo img, .byline img, .author img { filter: grayscale(1) contrast(1.32) brightness(1.06); }
+.hero__photo img, .byline img, .author img { filter: grayscale(1) contrast(1.22) brightness(0.95); }
