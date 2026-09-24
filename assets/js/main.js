@@ -96,3 +96,72 @@ document.querySelectorAll('[data-year]').forEach((el) => (el.textContent = new D
   window.addEventListener('hashchange', () => setTimeout(update, 50));
   update();
 })();
+
+// Open the matching FAQ answer when a question link is clicked
+(function () {
+  function openFromHash() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    const el = document.getElementById(id);
+    if (el && el.tagName === 'DETAILS') {
+      el.open = true;
+      el.classList.add('is-flash');
+      setTimeout(() => el.classList.remove('is-flash'), 1600);
+    }
+  }
+  window.addEventListener('hashchange', openFromHash);
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a.what__q');
+    if (a) setTimeout(openFromHash, 0);
+  });
+  openFromHash();
+})();
+
+// Service cards: clicking moves the highlight and preselects the service in the inquiry form
+(function () {
+  const cards = [...document.querySelectorAll('.service[data-option]')];
+  if (!cards.length) return;
+  const select = document.getElementById('service');
+  function choose(card) {
+    cards.forEach((c) => {
+      const on = c === card;
+      c.classList.toggle('is-selected', on);
+      c.setAttribute('aria-current', on ? 'true' : 'false');
+      const btn = c.querySelector('.btn');
+      if (btn) { btn.classList.toggle('btn--primary', on); btn.classList.toggle('btn--ghost', !on); }
+    });
+    if (select) select.selectedIndex = Number(card.dataset.option);
+  }
+  cards.forEach((card) => {
+    card.addEventListener('click', () => choose(card));
+    card.addEventListener('keydown', (e) => {
+      if ((e.key === 'Enter' || e.key === ' ') && e.target === card) { e.preventDefault(); choose(card); }
+    });
+  });
+})();
+
+// Brand lockup: stretch "SCREENWRITING CONSULTANT" to exactly the width of "MATT TABAK" with whatever font loads
+(function () {
+  function fit() {
+    document.querySelectorAll('.brand').forEach((brand) => {
+      const name = brand.querySelector('.brand__name');
+      const kicker = brand.querySelector('.brand__kicker');
+      if (!name || !kicker) return;
+      const nameLS = parseFloat(getComputedStyle(name).letterSpacing) || 0;
+      const target = name.getBoundingClientRect().width - nameLS;
+      kicker.style.letterSpacing = '0px';
+      kicker.style.marginRight = '0px';
+      kicker.style.display = 'inline-block';
+      const base = kicker.getBoundingClientRect().width;
+      const chars = kicker.textContent.trim().length;
+      if (chars < 2 || target <= 0) return;
+      const ls = Math.max(0, (target - base) / (chars - 1));
+      kicker.style.letterSpacing = ls.toFixed(2) + 'px';
+      kicker.style.marginRight = (-ls).toFixed(2) + 'px';
+    });
+  }
+  fit();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  window.addEventListener('resize', fit);
+  window.addEventListener('load', fit);
+})();
