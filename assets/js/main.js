@@ -39,3 +39,28 @@ chips.forEach((chip) => {
 
 // Current year in footer
 document.querySelectorAll('[data-year]').forEach((el) => (el.textContent = new Date().getFullYear()));
+
+// Rotating quote hero
+(function () {
+  const root = document.querySelector('.quote-hero');
+  if (!root) return;
+  const slides = [...root.querySelectorAll('.qh-slide')];
+  const dots = [...root.querySelectorAll('.qh-dot')];
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let i = 0, timer = null;
+
+  function show(n) {
+    i = (n + slides.length) % slides.length;
+    slides.forEach((s, k) => { s.classList.toggle('is-active', k === i); s.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+    dots.forEach((d, k) => d.setAttribute('aria-current', k === i ? 'true' : 'false'));
+  }
+  function start() { stop(); if (!reduce) timer = setInterval(() => show(i + 1), 4000); }
+  function stop() { clearInterval(timer); timer = null; }
+  dots.forEach((d, k) => d.addEventListener('click', () => { show(k); start(); }));
+  root.addEventListener('mouseenter', stop);
+  root.addEventListener('mouseleave', start);
+  root.addEventListener('focusin', stop);
+  root.addEventListener('focusout', start);
+  show(0);
+  start();
+})();
