@@ -1221,3 +1221,8 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 /* Stats row now has three items */
 .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 700px) { .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); } .stats li:nth-child(3) { border-left: 1px solid var(--card-line); } .stats li:nth-child(n+3) { border-top: none; } .stats li { padding: 18px 10px; } }
+/* Who: one-line headline, credential line reads as body copy */
+.who__title { max-width: none; white-space: nowrap; }
+@media (max-width: 760px) { .who__title { white-space: normal; } }
+.who__lead { font-family: var(--serif-text, Georgia, serif); font-size: clamp(18px, 1.5vw, 21px); line-height: 1.6; letter-spacing: 0; max-width: 60ch; margin-top: 16px; color: var(--text); }
+.who__lead em { font-style: italic; }
