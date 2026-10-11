@@ -1255,3 +1255,6 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 @media (max-width: 700px) { .beyond__head { flex-direction: row; align-items: center; gap: 16px; } .beyond__art { width: 84px; } }
 .who__pull { padding-top: clamp(36px, 4vw, 52px); padding-bottom: clamp(36px, 4vw, 52px); }
 .beyond__text strong { font-weight: 600; color: #1C1A18; }
+/* Credits + "The what" now sit together on one gray band: no divider, one rhythm */
+.credits-band + .what { border-top: none !important; padding-top: 0 !important; }
+.credits-band { padding-bottom: clamp(48px, 6vw, 72px) !important; }
