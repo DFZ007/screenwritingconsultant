@@ -1194,3 +1194,4 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 
 /* Mobile: portrait at half size, centered */
 @media (max-width: 900px) { .hero__photo { max-width: 180px; justify-self: center; margin-inline: auto; } .hero__photo figcaption { justify-content: center; text-align: center; } }
+@media (max-width: 900px) { .hero__photo figcaption { flex-direction: column; align-items: center; } }
