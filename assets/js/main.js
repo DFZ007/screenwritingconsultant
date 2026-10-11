@@ -52,6 +52,39 @@ if (inquiry) {
   });
 }
 
+// Newsletter signup: emails the address to Matt via FormSubmit
+const newsletter = document.getElementById('newsletter-form');
+if (newsletter) {
+  newsletter.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const status = newsletter.querySelector('.form-status');
+    const button = newsletter.querySelector('button[type="submit"]');
+    if (newsletter.querySelector('[name="_honey"]').value) return;
+    button.disabled = true;
+    button.textContent = 'Subscribing…';
+    const data = Object.fromEntries(new FormData(newsletter).entries());
+    try {
+      const res = await fetch(newsletter.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const out = await res.json().catch(() => ({}));
+      if (!res.ok || String(out.success) === 'false') throw new Error('fail');
+      newsletter.reset();
+      status.className = 'form-status form-status--ok';
+      status.textContent = "You're on the list. Thanks for subscribing.";
+      if (typeof gtag === 'function') gtag('event', 'sign_up', { method: 'newsletter' });
+    } catch (err) {
+      status.className = 'form-status form-status--error';
+      status.textContent = 'Sorry, that didn\'t go through. Please try again in a minute.';
+    } finally {
+      button.disabled = false;
+      button.textContent = 'Subscribe';
+    }
+  });
+}
+
 // Blog category filters
 const chips = document.querySelectorAll('.chip');
 const cards = document.querySelectorAll('.post-card');
