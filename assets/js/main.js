@@ -119,7 +119,7 @@ document.querySelectorAll('[data-year]').forEach((el) => (el.textContent = new D
   function start(first) {
     stop();
     if (reduce) return;
-    timer = setTimeout(function tick() { show(i + 1); timer = setTimeout(tick, 4000); }, first ? 2500 : 4000);
+    timer = setTimeout(function tick() { show(i + 1); timer = setTimeout(tick, 3000); }, first ? 2000 : 3000);
   }
   function stop() { clearTimeout(timer); timer = null; }
   dots.forEach((d, k) => d.addEventListener('click', () => { show(k); start(); }));

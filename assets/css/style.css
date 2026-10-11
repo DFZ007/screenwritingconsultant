@@ -1183,3 +1183,4 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .ab-pull__mark { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); font-family: var(--display); font-size: 180px; line-height: 1; color: var(--gold); opacity: 0.25; pointer-events: none; }
 .ab-pull blockquote { position: relative; margin: 0 auto; max-width: 30ch; font-family: var(--display); font-style: italic; font-size: clamp(26px, 3vw, 40px); line-height: 1.3; color: #FFFFFF; text-wrap: balance; }
 .ab-pull figcaption { margin-top: 22px; color: var(--gold); font-size: clamp(16px, 1.4vw, 19px); letter-spacing: 0.04em; }
+.ab-pull blockquote { border: 0; padding: 0; }
