@@ -117,10 +117,10 @@ document.querySelectorAll('[data-year]').forEach((el) => (el.textContent = new D
     dots.forEach((d, k) => d.setAttribute('aria-current', k === i ? 'true' : 'false'));
   }
   // With "Reduce motion" on, keep rotating but slower (the CSS uses a plain fade there).
-  const every = reduce ? 6000 : 3000;
+  const every = reduce ? 4500 : 2500;
   function start(first) {
     stop();
-    timer = setTimeout(function tick() { show(i + 1); timer = setTimeout(tick, every); }, first ? (reduce ? 4000 : 2000) : every);
+    timer = setTimeout(function tick() { show(i + 1); timer = setTimeout(tick, every); }, first ? (reduce ? 3000 : 1500) : every);
   }
   function stop() { clearTimeout(timer); timer = null; }
   dots.forEach((d, k) => d.addEventListener('click', () => { show(k); start(); }));
