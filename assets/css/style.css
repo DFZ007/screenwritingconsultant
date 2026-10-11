@@ -1226,3 +1226,9 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 @media (max-width: 760px) { .who__title { white-space: normal; } }
 .who__lead { font-family: var(--serif-text, Georgia, serif); font-size: clamp(18px, 1.5vw, 21px); line-height: 1.6; letter-spacing: 0; max-width: 60ch; margin-top: 16px; color: var(--text); }
 .who__lead em { font-style: italic; }
+/* Who: IMDb pull quote beside the Chapman photo */
+.who__pull { position: relative; margin: 0; padding: clamp(32px, 3.5vw, 48px) clamp(24px, 3vw, 40px); background: #2B2825; border-radius: 4px; overflow: hidden; }
+.who__pull-mark { position: absolute; top: -22px; left: 18px; font-family: var(--display); font-size: 150px; line-height: 1; color: var(--gold); opacity: 0.3; pointer-events: none; }
+.who__pull blockquote { position: relative; margin: 0; padding: 0; border: 0; font-family: var(--display); font-style: italic; font-size: clamp(22px, 2vw, 30px); line-height: 1.3; color: #FFFFFF; text-wrap: balance; }
+.who__pull figcaption { margin-top: 18px; color: var(--gold); font-size: 16px; letter-spacing: 0.04em; }
+.who__more { margin-top: 16px; font-size: 15px; }
