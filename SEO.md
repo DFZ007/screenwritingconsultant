@@ -104,3 +104,12 @@ Matt is cheaper on every line, with a broader résumé (three studios, produced 
 8. **Keep the no-AI and no-readers line prominent.** They only claim "no low-paid readers."
 
 Don't copy: the community forum (it needs moderation and gets little traffic) or a Gmail-based brand.
+
+## Blog illustrations
+
+Made in Gemini, Oct 11, 2026. Files live in `assets/img/blog/`: `<slug>.webp` (full size, used for post heroes), `<slug>-720.webp` (cards) and `<slug>-og.jpg` (1200×630 social image). Every planned post already has one.
+
+**Style prompt (start every new image with this):**
+> Sophisticated editorial illustration in the tradition of classic New Yorker and Atlantic magazine art: confident hand-drawn ink line with loose gouache washes on warm ivory paper, limited palette of ivory, charcoal black and one muted antique-gold accent, generous negative space, wry understated wit, mid-century modern sensibility. No text, no letters, no words, no logos, no real or recognizable people. Wide landscape 16:9 composition.
+
+Then describe a single visual metaphor for the post, and make one element antique gold. Never depict real people, film characters or studio and streamer logos.
