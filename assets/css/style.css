@@ -1238,3 +1238,9 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .ab-pull { padding-top: clamp(84px, 8vw, 104px); }
 .ab-pull__mark { top: 24px; font-size: 120px; line-height: 0.8; height: 60px; opacity: 0.55; }
 .who__pull blockquote { font-size: clamp(20px, 1.7vw, 25px); }
+/* Who: quote box matches the Chapman photo (photo's caption sits below) */
+.who__foot { align-items: stretch; }
+.who__side { padding-bottom: 26px; }
+.who__pull { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.teach-photo figcaption { line-height: 18px; }
+@media (max-width: 800px) { .who__side { padding-bottom: 0; } }
