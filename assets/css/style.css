@@ -1188,3 +1188,6 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 /* Header: larger "Screenwriting Consultant" with tighter tracking */
 .site-header .brand__kicker { font-size: 13px; letter-spacing: 0.085em; }
 @media (max-width: 900px) { .site-header .brand__kicker { font-size: 10.5px; letter-spacing: 0.08em; } }
+
+/* Reduce motion: quotes still change, with a plain fade and no movement */
+@media (prefers-reduced-motion: reduce) { .qh-slide { transition: opacity 0.6s ease !important; transform: none !important; } }
