@@ -1249,3 +1249,7 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .beyond__label { margin: 0; font-family: var(--display); font-style: italic; font-size: clamp(22px, 2vw, 28px); color: var(--gold-ink, #8A6A2E); line-height: 1.2; }
 .beyond__text { margin: 0; font-size: 17px; line-height: 1.6; color: var(--text-2, #333); max-width: 70ch; }
 @media (max-width: 700px) { .beyond { grid-template-columns: 1fr; } }
+.beyond { align-items: center; }
+.beyond__head { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.beyond__art { width: 120px; height: auto; display: block; }
+@media (max-width: 700px) { .beyond__head { flex-direction: row; align-items: center; gap: 16px; } .beyond__art { width: 84px; } }
