@@ -1253,3 +1253,4 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .beyond__head { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
 .beyond__art { width: 120px; height: auto; display: block; }
 @media (max-width: 700px) { .beyond__head { flex-direction: row; align-items: center; gap: 16px; } .beyond__art { width: 84px; } }
+.who__pull { padding-top: clamp(36px, 4vw, 52px); padding-bottom: clamp(36px, 4vw, 52px); }
