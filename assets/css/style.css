@@ -1173,3 +1173,7 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .featured .thumb--img { aspect-ratio: 16 / 9; }
 .article-hero { max-width: 1100px; margin: 0 auto clamp(32px, 4vw, 56px); }
 .article-hero img { display: block; width: 100%; height: auto; border: 1px solid var(--line-2, #E4E0D8); }
+
+/* Larger quote attributions in the hero */
+.qh-slide figcaption { font-size: clamp(18px, 1.7vw, 23px); margin-top: 28px; }
+.qh-slide figcaption .qh-aside { font-size: clamp(15px, 1.2vw, 17px); }
