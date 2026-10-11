@@ -1159,3 +1159,10 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .form-status--ok { padding: 16px 18px; border-radius: 4px; background: #EEF5EF; border-left: 3px solid #3F7D4E; color: #1F3B26; }
 .form-status--error { padding: 16px 18px; border-radius: 4px; background: #FBEDEA; border-left: 3px solid #B5483A; color: #5A1F17; }
 .form button[disabled] { opacity: 0.7; cursor: wait; }
+
+/* Sent state: replace the form with a clear confirmation */
+.form.is-sent > *:not(.form-status) { display: none !important; }
+.form.is-sent .form-status--ok { display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center; padding: 56px 28px; margin: 0; background: transparent; border: 0; color: var(--ink, #1C1A18); }
+.form.is-sent .form-status--ok::before { content: '✓'; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; border: 1px solid #E1BE5A; color: #9A7B22; font-size: 26px; margin-bottom: 12px; }
+.form-done__title { font-family: 'Libre Caslon Display', Georgia, serif; font-size: 30px; line-height: 1.2; }
+.form-done__body { font-size: 17px; color: #5E5A54; }

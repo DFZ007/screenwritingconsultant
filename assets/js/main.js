@@ -39,7 +39,8 @@ if (inquiry) {
       inquiry.reset();
       inquiry.classList.add('is-sent');
       status.className = 'form-status form-status--ok';
-      status.innerHTML = '<strong>Thanks, your message has been sent.</strong> I will get back to you shortly.';
+      status.innerHTML = '<span class="form-done__title">Thanks, your message has been sent.</span><span class="form-done__body">I will get back to you shortly.</span>';
+      inquiry.scrollIntoView({ behavior: 'smooth', block: 'center' });
       if (typeof gtag === 'function') gtag('event', 'generate_lead', { form: 'inquiry', service: data.service });
     } catch (err) {
       status.className = 'form-status form-status--error';
