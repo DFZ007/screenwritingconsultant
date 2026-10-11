@@ -1237,3 +1237,4 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .who__pull-mark { top: 22px; left: clamp(26px, 3vw, 40px); font-size: 110px; line-height: 0.8; height: 56px; opacity: 0.55; }
 .ab-pull { padding-top: clamp(84px, 8vw, 104px); }
 .ab-pull__mark { top: 24px; font-size: 120px; line-height: 0.8; height: 60px; opacity: 0.55; }
+.who__pull blockquote { font-size: clamp(20px, 1.7vw, 25px); }
