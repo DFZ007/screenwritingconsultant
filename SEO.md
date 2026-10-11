@@ -72,7 +72,7 @@ Reviewed Oct 11, 2026 (home, FAQ, articles, testimonials, booking and sample pag
 | TV pilot (and bible) | $599 | $400 |
 | Outline / treatment | $399 | $350 |
 | Idea session | $299, 1 hr ("Concept Test-Drive") | $175 logline punch-up |
-| General consult | $299 / hr | $195 first hr, $125 after |
+| General consult | $299 / hr | $200 / hr |
 
 Matt is cheaper on every line, with a broader résumé (three studios, produced WGA writer and director, attorney). The low prices undersell him.
 
