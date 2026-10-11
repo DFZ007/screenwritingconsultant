@@ -1166,3 +1166,10 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .form.is-sent .form-status--ok::before { content: '✓'; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; border: 1px solid #E1BE5A; color: #9A7B22; font-size: 26px; margin-bottom: 12px; }
 .form-done__title { font-family: 'Libre Caslon Display', Georgia, serif; font-size: 30px; line-height: 1.2; color: #1C1A18; }
 .form-done__body { font-size: 17px; color: #5E5A54; }
+
+/* Blog illustrations */
+.thumb--img { display: block; width: 100%; height: auto; object-fit: cover; padding: 0; background: #F4F0E6; }
+.post-card .thumb--img { aspect-ratio: 16 / 9; margin-bottom: 18px; }
+.featured .thumb--img { aspect-ratio: 16 / 9; }
+.article-hero { max-width: 1100px; margin: 0 auto clamp(32px, 4vw, 56px); }
+.article-hero img { display: block; width: 100%; height: auto; border: 1px solid var(--line-2, #E4E0D8); }
