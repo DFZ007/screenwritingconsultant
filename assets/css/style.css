@@ -1184,3 +1184,7 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .ab-pull blockquote { position: relative; margin: 0 auto; max-width: 30ch; font-family: var(--display); font-style: italic; font-size: clamp(26px, 3vw, 40px); line-height: 1.3; color: #FFFFFF; text-wrap: balance; }
 .ab-pull figcaption { margin-top: 22px; color: var(--gold); font-size: clamp(16px, 1.4vw, 19px); letter-spacing: 0.04em; }
 .ab-pull blockquote { border: 0; padding: 0; }
+
+/* Header: larger "Screenwriting Consultant" with tighter tracking */
+.site-header .brand__kicker { font-size: 13px; letter-spacing: 0.085em; }
+@media (max-width: 900px) { .site-header .brand__kicker { font-size: 10.5px; letter-spacing: 0.08em; } }
