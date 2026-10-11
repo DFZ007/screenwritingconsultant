@@ -1218,3 +1218,6 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 /* Even gray margin above and below the credits card */
 .credits-band { padding-block: clamp(48px, 6vw, 80px) !important; }
 .credits-band .filmography { margin-top: 0 !important; }
+/* Stats row now has three items */
+.stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 700px) { .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); } .stats li:nth-child(3) { border-left: 1px solid var(--card-line); } .stats li:nth-child(n+3) { border-top: none; } .stats li { padding: 18px 10px; } }
