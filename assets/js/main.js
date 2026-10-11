@@ -14,14 +14,42 @@ if (toggle && nav) {
   );
 }
 
-// Demo forms: no backend on GitHub Pages, so show what would happen instead.
-document.querySelectorAll('form[data-demo]').forEach((form) => {
-  form.addEventListener('submit', (e) => {
+// Inquiry form: send via FormSubmit in the background and confirm inline
+const inquiry = document.getElementById('inquiry-form');
+if (inquiry) {
+  inquiry.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const status = form.querySelector('.form-status');
-    if (status) status.textContent = form.dataset.demo;
+    const status = inquiry.querySelector('.form-status');
+    const button = inquiry.querySelector('button[type="submit"]');
+    if (inquiry.querySelector('[name="_honey"]').value) return; // bot
+    button.disabled = true;
+    button.textContent = 'Sending…';
+    status.className = 'form-status';
+    status.textContent = '';
+    const data = Object.fromEntries(new FormData(inquiry).entries());
+    data._replyto = data.email;
+    try {
+      const res = await fetch(inquiry.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const out = await res.json().catch(() => ({}));
+      if (!res.ok || String(out.success) === 'false') throw new Error(out.message || 'Send failed');
+      inquiry.reset();
+      inquiry.classList.add('is-sent');
+      status.className = 'form-status form-status--ok';
+      status.innerHTML = '<strong>Thanks, your message has been sent.</strong> I will get back to you shortly.';
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { form: 'inquiry', service: data.service });
+    } catch (err) {
+      status.className = 'form-status form-status--error';
+      status.innerHTML = 'Sorry, something went wrong. Please email <a href="mailto:matt@screenwritingconsultant.com">matt@screenwritingconsultant.com</a> directly.';
+    } finally {
+      button.disabled = false;
+      button.textContent = 'Send inquiry';
+    }
   });
-});
+}
 
 // Blog category filters
 const chips = document.querySelectorAll('.chip');

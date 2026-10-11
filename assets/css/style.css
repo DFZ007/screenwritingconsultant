@@ -1152,3 +1152,10 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .odds__stat--astro { padding-top: 14px; border-top: 1px solid var(--card-line); }
 .odds__stat--astro ~ .odds__vs, .odds__stat--astro ~ .odds__stat { padding-top: 14px; }
 .odds__stat--row2, .odds__stat--astro ~ .odds__vs { border-top: 1px solid var(--card-line); align-self: stretch; display: flex; } .odds__stat--astro ~ .odds__vs { align-items: center; padding-top: 14px; }
+
+/* Inquiry form states */
+.hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+.form-status { margin: 4px 0 0; font-size: 16px; line-height: 1.5; }
+.form-status--ok { padding: 16px 18px; border-radius: 4px; background: #EEF5EF; border-left: 3px solid #3F7D4E; color: #1F3B26; }
+.form-status--error { padding: 16px 18px; border-radius: 4px; background: #FBEDEA; border-left: 3px solid #B5483A; color: #5A1F17; }
+.form button[disabled] { opacity: 0.7; cursor: wait; }
