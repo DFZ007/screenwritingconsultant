@@ -1210,3 +1210,4 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .tagline-band--billion .tagline { max-width: 22ch; margin-inline: auto; }
 .tagline-band--billion .tagline em { white-space: nowrap; }
 .tagline-band--billion .tagline { max-width: 44ch; font-size: clamp(26px, 3vw, 44px); }
+.tagline-band .tagline__icon--ticket { width: 150px; height: 84px; margin: 0 auto 20px; }
