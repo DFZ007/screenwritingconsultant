@@ -1207,3 +1207,5 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .trust--badges + .hero__actions { margin-top: 28px; }
 @media (max-width: 900px) { .trust--badges .wga-badge { font-size: 12.5px; padding: 9px 13px; } }
 .hero__bo strong { white-space: nowrap; flex-shrink: 0; }
+.tagline-band--billion .tagline { max-width: 22ch; margin-inline: auto; }
+.tagline-band--billion .tagline em { white-space: nowrap; }
