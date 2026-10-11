@@ -1209,3 +1209,4 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .hero__bo strong { white-space: nowrap; flex-shrink: 0; }
 .tagline-band--billion .tagline { max-width: 22ch; margin-inline: auto; }
 .tagline-band--billion .tagline em { white-space: nowrap; }
+.tagline-band--billion .tagline { max-width: 44ch; font-size: clamp(26px, 3vw, 44px); }
