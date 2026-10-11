@@ -1213,3 +1213,5 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .tagline-band .tagline__icon--ticket { width: 150px; height: 84px; margin: 0 auto 20px; }
 .credits-band { padding-top: 0; }
 .credits-band .filmography { margin-top: clamp(40px, 5vw, 64px); }
+/* Track record: five posters in a row on desktop */
+@media (min-width: 1001px) { .titlecards { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; } }
