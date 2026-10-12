@@ -1261,3 +1261,5 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 /* Mini cards join the service selection group */
 .mini { cursor: pointer; transition: background .2s, border-color .2s, box-shadow .2s; }
 .mini.is-selected { background: var(--gold-tint); border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+/* <picture> WebP fallbacks: keep layout as if the img were a direct child */
+picture { display: contents; }
