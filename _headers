@@ -12,3 +12,6 @@
   Access-Control-Allow-Origin: *
 /assets/img/matt-tabak.jpg
   Access-Control-Allow-Origin: *
+
+/assets/downloads/*
+  X-Robots-Tag: noindex
