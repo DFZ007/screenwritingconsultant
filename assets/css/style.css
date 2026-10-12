@@ -1263,3 +1263,4 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .mini.is-selected { background: var(--gold-tint); border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
 /* <picture> WebP fallbacks: keep layout as if the img were a direct child */
 picture { display: contents; }
+picture > source { display: none; }
