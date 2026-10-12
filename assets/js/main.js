@@ -182,7 +182,7 @@ document.querySelectorAll('[data-year]').forEach((el) => (el.textContent = new D
 
 // Service cards: clicking moves the highlight and preselects the service in the inquiry form
 (function () {
-  const cards = [...document.querySelectorAll('.service[data-option]')];
+  const cards = [...document.querySelectorAll('.service[data-option], .mini[data-option]')];
   if (!cards.length) return;
   const select = document.getElementById('service');
   function choose(card) {
