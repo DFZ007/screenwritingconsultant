@@ -7,3 +7,8 @@
 
 /assets/css/*
   Cache-Control: public, max-age=300, must-revalidate
+
+/assets/img/gbp-*
+  Access-Control-Allow-Origin: *
+/assets/img/matt-tabak.jpg
+  Access-Control-Allow-Origin: *
