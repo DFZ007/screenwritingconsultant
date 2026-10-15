@@ -113,3 +113,27 @@ Made in Gemini, Oct 11, 2026. Files live in `assets/img/blog/`: `<slug>.webp` (f
 > Sophisticated editorial illustration in the tradition of classic New Yorker and Atlantic magazine art: confident hand-drawn ink line with loose gouache washes on warm ivory paper, limited palette of ivory, charcoal black and one muted antique-gold accent, generous negative space, wry understated wit, mid-century modern sensibility. No text, no letters, no words, no logos, no real or recognizable people. Wide landscape 16:9 composition.
 
 Then describe a single visual metaphor for the post, and make one element antique gold. Never depict real people, film characters or studio and streamer logos.
+
+## Keyword refresh (Oct 15, 2026 pull, Oct 2022 – Sep 2026)
+
+- **script coverage** 1,000/mo, steady. Core term; keep it front and center.
+- **script doctor** 880/mo, +22% over 3 months, low competition. NOT yet targeted. Matt's homepage already says he was "a script doctor for major studios." Next step: a dedicated page or post (e.g. /script-doctor/ "What a script doctor actually does") and add the term to the homepage title/description. Ignore "script from doctor" (210, medical).
+- **screenplay coverage example** 590/mo (post live Oct 14).
+- **movie script coverage / script reader coverage** 260, down 34% YoY.
+- **screenwriting consultant / screenplay consultant** 260, down 65% YoY. Keep for brand; not a growth term.
+- **script coverage services** 210, down 47% YoY (2025 spike = Coverfly users looking for a replacement; fading).
+- **film script coverage** 140, up 55% over 3 months.
+- Top-of-page bids $2–$9: a small Google Ads test on coverage + script doctor terms is affordable.
+
+## Backlink plan (Oct 15, 2026)
+
+- **Face/Off 30th anniversary: June 27, 2027** (US release verified). No retrospective so far has quoted a studio exec. Pitch from March 2027: Den of Geek tips@denofgeek.com; Inverse (2022 oral history) hoaitran.bui@inverse.com; THR THRnews@thr.com; past Face/Off writers at SlashFilm (Chris Evangelista), The Ringer (Andrew Gruttadaro), Paste (Rory Doherty). BLOCKER: Matt's public bio (incl. Chapman page) doesn't name Face/Off; gather documentation before pitching.
+- **Podcasts:** Selling Your Screenplay (info@sellingyourscreenplay.com, links guest sites), Script Apart (scriptapart.com/contact; Face/Off first-draft angle), Bulletproof Screenwriting (x.com/bpscreenplay, links guest sites), The Q&A with Jeff Goldsmith (x.com/yogoldsmith), Screenwriters' Rant Room, Film Courage, The Screenwriting Life, The Writers Panel. PodcastGuests.com (free), MatchMaker.fm ($15/mo). Scriptnotes and KCRW The Business don't take pitches; On the Page ended Jul 2026.
+- **Profiles:** add website to Chapman faculty page (and fix Lecturer → Professor), IMDb, WGA Find a Writer, LinkedIn.
+- **Expert-source sites:** Source of Sources (free), Featured.com (free plan; owns HARO now), Qwoted (free basic). Connectively shut down Dec 2024; Help a B2B Writer is now MentionMatch.
+- **Resources page** (unpublished branch `resources`) → outreach to film-school librarians, starting with Chapman.
+- Avoid paid links / link packages.
+
+## ScriptGenius re-check (Oct 15, 2026)
+
+No price changes since Oct 11. New notes: their feature and pilot reads include a 1-hour call (Matt: 2 hours, for less); they use "script doctoring" in copy but don't target "script doctor" or "script coverage"; homepage last modified Jul 2025.
