@@ -1264,3 +1264,18 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 /* <picture> WebP fallbacks: keep layout as if the img were a direct child */
 picture { display: contents; }
 picture > source { display: none; }
+
+/* Sample coverage report (script-coverage-example post) */
+.sample-coverage { margin: 32px 0; padding: 28px 30px; background: #FBF9F4; border: 1px solid var(--line-2); border-top: 3px solid var(--gold); border-radius: 4px; font-size: 16px; }
+.sample-coverage > .label { display: inline-block; margin: 0 0 12px; font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #B0412E; }
+.sample-coverage h3 { font-family: var(--display); font-weight: 400; font-size: 26px; margin: 0 0 14px; }
+.sample-coverage h4 { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-ink); margin: 22px 0 6px; }
+.sample-coverage dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 18px; margin: 0; font-family: var(--mono); font-size: 14px; }
+.sample-coverage dt { color: var(--muted); }
+.sample-coverage dd { margin: 0; }
+.cov-grid { width: 100%; border-collapse: collapse; font-size: 14.5px; margin: 8px 0 4px; }
+.cov-grid th, .cov-grid td { border: 1px solid var(--line-2); padding: 7px 10px; text-align: center; }
+.cov-grid th:first-child, .cov-grid td:first-child { text-align: left; }
+.cov-grid thead th { background: #F2EEE4; font-weight: 600; font-size: 13px; }
+@media (max-width: 560px) { .sample-coverage { padding: 20px 16px; } .sample-coverage dl { grid-template-columns: 1fr; } .sample-coverage dt { margin-top: 6px; } .cov-grid { font-size: 13px; } .cov-grid th, .cov-grid td { padding: 6px 5px; } }
+.sample-coverage p { margin: 0 0 12px; }
