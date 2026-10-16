@@ -254,7 +254,7 @@
     <input type="hidden" name="source" value="Resources page: 2027 calendar">
     <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <label for="cal-email">Email address</label>
-    <div class="inline"><input id="cal-email" name="email" type="email" autocomplete="email" required><button class="btn btn--primary" type="submit">Send me the calendar</button></div>
+    <div class="inline"><input id="cal-email" name="email" type="email" autocomplete="email" required><button class="btn btn--primary" type="submit">Get the calendar</button></div>
     <p class="res-gate__fine">You’ll also get new blog posts by email now and then. Unsubscribe anytime.</p>
     <p class="form-status" role="status"></p>
   </form>
@@ -406,7 +406,7 @@
     .then(function(){
       cf.innerHTML='<p class="res-gate__ok">✓ Here’s your calendar.</p><a class="btn btn--primary" href="../assets/downloads/fellowship-contest-calendar-2027.pdf" target="_blank" rel="noopener" download>Download the PDF</a>';
       if(typeof gtag==='function') gtag('event','sign_up',{method:'calendar_download',form_location:'resources'});
-    }).catch(function(){st.className='form-status form-status--error'; st.textContent='Sorry, that didn’t go through. Please try again in a minute.'; btn.disabled=false; btn.textContent='Send me the calendar';});
+    }).catch(function(){st.className='form-status form-status--error'; st.textContent='Sorry, that didn’t go through. Please try again in a minute.'; btn.disabled=false; btn.textContent='Get the calendar';});
   });
   document.addEventListener('click',function(e){
     var a=e.target.closest('.res-name'); if(!a||typeof gtag!=='function') return;
