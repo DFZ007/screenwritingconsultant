@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=Courier+Prime&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/css/style.css?v=20261014a">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261016a">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -303,6 +303,26 @@
 
 
 <footer class="site-footer">
+  <div class="wrap footer-signup">
+    <div class="footer-signup__copy">
+      <p class="footer-signup__title">Get the next post by email</p>
+      <p>New essays on the craft and the business of screenwriting. Unsubscribe anytime.</p>
+    </div>
+    <form class="js-newsletter footer-signup__form" action="https://formsubmit.co/matt@screenwritingconsultant.com" method="POST">
+      <input type="hidden" name="_subject" value="New newsletter subscriber (footer): screenwritingconsultant.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="source" value="footer">
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="sr-only" for="ft-email">Email address</label>
+      <div class="inline">
+        <input id="ft-email" name="email" type="email" placeholder="Your email address" autocomplete="email" required>
+        <button class="btn btn--primary" type="submit">Subscribe</button>
+      </div>
+      <label class="optin"><input type="checkbox" name="opt_in" value="yes" checked required> Yes, email me new posts and occasional updates from Matt.</label>
+      <p class="form-status" role="status"></p>
+    </form>
+  </div>
   <div class="wrap">
     <a class="brand" href="../../"><img src="../../assets/img/logo.svg?v=2" alt="" width="74" height="45"><span class="brand__text"><span class="brand__name">Matt Tabak</span> <span class="brand__kicker">Screenwriting Consultant</span></span></a>
     <nav aria-label="Footer">
@@ -317,6 +337,6 @@
   </div>
 </footer>
 
-<script src="../../assets/js/main.js?v=20261014a"></script>
+<script src="../../assets/js/main.js?v=20261016a"></script>
 </body>
 </html>

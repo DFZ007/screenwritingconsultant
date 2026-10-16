@@ -52,9 +52,8 @@ if (inquiry) {
   });
 }
 
-// Newsletter signup: emails the address to Matt via FormSubmit
-const newsletter = document.getElementById('newsletter-form');
-if (newsletter) {
+// Newsletter signups (blog page + site footer): email the address to Matt via FormSubmit
+document.querySelectorAll('#newsletter-form, .js-newsletter').forEach((newsletter) => {
   newsletter.addEventListener('submit', async (e) => {
     e.preventDefault();
     const status = newsletter.querySelector('.form-status');
@@ -74,7 +73,7 @@ if (newsletter) {
       newsletter.reset();
       status.className = 'form-status form-status--ok';
       status.textContent = "You're on the list. Thanks for subscribing.";
-      if (typeof gtag === 'function') gtag('event', 'sign_up', { method: 'newsletter' });
+      if (typeof gtag === 'function') gtag('event', 'sign_up', { method: 'newsletter', form_location: data.source || 'blog' });
     } catch (err) {
       status.className = 'form-status form-status--error';
       status.textContent = 'Sorry, that didn\'t go through. Please try again in a minute.';
@@ -83,7 +82,7 @@ if (newsletter) {
       button.textContent = 'Subscribe';
     }
   });
-}
+});
 
 // Blog category filters
 const chips = document.querySelectorAll('.chip');
