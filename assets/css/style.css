@@ -1288,8 +1288,6 @@ picture > source { display: none; }
 .footer-signup__form .inline { display: flex; gap: 12px; }
 .footer-signup__form input[type="email"] { flex: 1; min-width: 0; font: inherit; font-size: 16px; padding: 14px 16px; border: 1px solid var(--line-2); background: #FFFFFF; color: var(--text); border-radius: 0; }
 .footer-signup__form input[type="email"]:focus { outline: 2px solid var(--gold, var(--accent)); outline-offset: 0; border-color: var(--gold, var(--accent)); }
-.footer-signup__form .optin { display: flex; gap: 10px; align-items: flex-start; margin-top: 14px; font-size: 14px; color: var(--text-3); line-height: 1.45; cursor: pointer; }
-.footer-signup__form .optin input { margin: 2px 0 0; width: 16px; height: 16px; flex: none; accent-color: #111111; }
 .footer-signup__form .form-status { min-height: 0; }
 .footer-signup__form .form-status:not(:empty) { margin-top: 12px; }
 @media (max-width: 900px) { .site-footer .footer-signup { grid-template-columns: 1fr; gap: 20px; } }
