@@ -137,3 +137,25 @@ Then describe a single visual metaphor for the post, and make one element antiqu
 ## ScriptGenius re-check (Oct 15, 2026)
 
 No price changes since Oct 11. New notes: their feature and pilot reads include a 1-hour call (Matt: 2 hours, for less); they use "script doctoring" in copy but don't target "script doctor" or "script coverage"; homepage last modified Jul 2025.
+
+## Service pages plan (Oct 16, 2026; not built yet)
+
+Decision: keep the live Zoom/phone notes call on the homepage as the main offer ("Better than coverage"). Add two service pages, in this order. Don't split out pilot, treatment or logline services until there's keyword data for them.
+
+### 1. Script doctor page: `/script-doctor/` (build first)
+- Target: **script doctor** (880/mo, +22% in 3 months, low competition). ScriptGenius uses "script doctoring" only to describe its founder's past studio work; it doesn't offer the service or target the term.
+- Search results mix explainers (Wikipedia, Script Reader Pro) with service pages (Industrial Scripts), so build a hybrid page: what a script doctor actually does, then Matt's studio script-doctor experience as proof, then a **Request a quote** form (no fixed price; rewrite jobs vary too much).
+- Add "script doctor" to the homepage title/description once the page exists.
+- **BLOCKER: check WGA rules first.** Script doctoring means writing or rewriting pages, not just notes. Matt is a WGA member, and Working Rule 8 bars members from writing for companies that haven't signed the Guild's contract. Matt should confirm with the WGA whether paid rewrites for private writers are allowed before offering or advertising the service. (Not verified by us.)
+
+### 2. Written coverage page: `/script-coverage/` (build second)
+- Target: **script coverage** (1,000/mo, steady), plus script coverage services (210, fading) and film script coverage (140, rising).
+- **Avoid cannibalization:** the service page targets buyer intent (services, professional coverage, price). Retitle `/blog/script-coverage/` (currently "...Why I Give It Verbally") to target "what is script coverage" and link to the service page.
+- **Use the existing sample:** link "See a sample report" to `/blog/script-coverage-example/` (its mock report beats ScriptGenius's one-image sample).
+- **Pricing structure:** price written coverage above the call, and show a comparison table (written report / notes call, recommended / both). Consider a "call + written report" bundle so written coverage reads as an upgrade, not a contradiction. Settle the base price raise (suggested: feature $750, pilot $550) first.
+- Expect many "script coverage" searchers to be budget buyers comparing low-cost reader services; the page's job is to steer them to the call.
+- **When this launches, update every "verbal only" statement at the same time:** homepage FAQ ("Handwritten notes are not a part of these services"), homepage "verbal script coverage" description, `/blog/script-coverage/` "Why I give script coverage verbally" section, the "never imply a written report" framing in `/blog/script-coverage-example/`, `llms.txt`, and this file's Oct 11 "coverage" decision. Then take "Coverage" out of the homepage title so the two pages don't compete.
+
+### Timing and ads
+- New domain: expect 3–6 months to rank; "script doctor" is the best near-term shot.
+- These two pages are the right landing pages for a Google Ads test on coverage and script doctor terms ($2–$9 CPCs), better than the homepage.
