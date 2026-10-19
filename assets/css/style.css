@@ -1339,3 +1339,29 @@ picture > source { display: none; }
 @media (max-width: 800px) { .res-gate { grid-template-columns: 1fr; } }
 .res-jump .chip--gold { background: var(--gold); border-color: var(--gold); color: #111; font-weight: 600; }
 .res-name--local::after { content: " \2192"; }
+
+/* Logline quiz (blog/logline-examples) */
+.lq-score { position: sticky; top: 0; z-index: 3; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 18px; margin: 24px 0; background: #2C2925; color: #F4EFE3; border-radius: 4px; font-size: 16px; }
+.lq-score strong { color: #E3C66B; font-size: 20px; }
+.lq-score button { font: inherit; font-size: 14px; background: transparent; color: #D9D2C3; border: 1px solid #6B6355; border-radius: 3px; padding: 6px 12px; cursor: pointer; }
+.lq-list { list-style: none; counter-reset: lq; margin: 0; padding: 0; }
+.lq-item { counter-increment: lq; position: relative; padding: 18px 0 18px 52px; border-bottom: 1px solid var(--line-2); }
+.lq-item::before { content: counter(lq); position: absolute; left: 0; top: 18px; font-family: var(--display); font-size: 24px; color: var(--gold-ink); }
+.lq-line { margin: 0 0 8px; font-size: 18px; line-height: 1.55; }
+.lq-item details summary { cursor: pointer; font-size: 14px; font-weight: 600; color: var(--gold-ink); list-style: none; display: inline-block; border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
+.lq-item details summary::-webkit-details-marker { display: none; }
+.lq-item details[open] summary { display: none; }
+.lq-ans { margin: 6px 0 8px; font-size: 18px; }
+.lq-btns { display: flex; gap: 8px; }
+.lq-btns button { font: inherit; font-size: 14px; padding: 6px 12px; border-radius: 3px; border: 1px solid var(--line-2); background: #FFFFFF; cursor: pointer; }
+.lq-btns button[data-r="got"] { border-color: var(--gold); }
+.lq-btns button:disabled { opacity: .45; cursor: default; }
+.lq-item.is-got .lq-ans::after { content: "  \2713 Got it"; font-size: 14px; color: #2E6B3A; font-weight: 600; }
+.lq-item.is-miss .lq-ans::after { content: "  Missed"; font-size: 14px; color: #8C8476; font-weight: 600; }
+.prose .lq-item details { border: 0; padding: 0; margin: 0; }
+.prose .lq-item details summary { padding: 0 0 1px; margin: 0; font-size: 14px; border-bottom: 1px solid var(--gold); }
+.prose .lq-item details summary::after { content: none; }
+.prose .lq-item p { border: 0; }
+.prose .lq-item .lq-line { margin: 0 0 8px; }
+.lq-score { top: 92px; }
+@media (max-width: 900px) { .lq-score { top: 72px; } }
