@@ -1365,3 +1365,7 @@ picture > source { display: none; }
 .prose .lq-item .lq-line { margin: 0 0 8px; }
 .lq-score { top: 92px; }
 @media (max-width: 900px) { .lq-score { top: 72px; } }
+/* Seven nav items: keep the header on one line at mid widths */
+.nav .btn { white-space: nowrap; }
+@media (min-width: 901px) and (max-width: 1200px) { .nav { gap: 22px; } .nav a:not(.btn) { font-size: 15px; } .site-header .wrap { gap: 24px; } }
+@media (min-width: 901px) and (max-width: 999px) { .nav a[href="/"] { display: none; } }
