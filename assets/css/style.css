@@ -1338,3 +1338,4 @@ picture > source { display: none; }
 .res-gate .form-status--error { color: #F2A38F; }
 @media (max-width: 800px) { .res-gate { grid-template-columns: 1fr; } }
 .res-jump .chip--gold { background: var(--gold); border-color: var(--gold); color: #111; font-weight: 600; }
+.res-name--local::after { content: " \2192"; }

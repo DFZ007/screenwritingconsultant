@@ -62,7 +62,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=Courier+Prime&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=20261016a">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261018a">
 </head>
 <body>
 
@@ -96,6 +96,7 @@
   <div class="res-tools">
     <label class="res-search"><span class="visually-hidden">Filter resources</span><input id="res-filter" type="search" placeholder="Filter: try “pilot”, “Nicholl” or “free”" autocomplete="off"></label>
     <nav class="chips res-jump" aria-label="Jump to section">
+    <a class="chip" href="#from-matt">From Matt</a>
     <a class="chip" href="#guilds">Guilds</a>
     <a class="chip" href="#scripts">Scripts</a>
     <a class="chip" href="#bibles">TV bibles</a>
@@ -110,6 +111,15 @@
     </nav>
   </div>
   <p class="res-empty" id="res-empty" hidden>No matches. Try a shorter word.</p>
+
+<section class="res-section" id="from-matt" aria-labelledby="from-matt-h">
+  <h2 id="from-matt-h">From Matt’s desk</h2>
+  <p class="res-intro">Guides I wrote for writers, free to read.</p>
+  <ul class="res-list">
+    <li class="res-item"><a class="res-name res-name--local" href="../blog/types-of-movie-ideas/">18 types of movie ideas</a><p class="res-desc">The proven engines behind most hit movies, from fish out of water to the night that goes completely wrong, with examples and the conflict each one creates.</p><p class="res-tags"><span class="res-tag res-tag--free">Free</span></p></li>
+    <li class="res-item"><a class="res-name res-name--local" href="../blog/lajos-egri-art-of-dramatic-writing/">The Art of Dramatic Writing, in brief</a><p class="res-desc">My take on Lajos Egri’s classic: the three-part premise, why your ending is already in it, and where the method is overrated.</p><p class="res-tags"><span class="res-tag res-tag--free">Free</span></p></li>
+  </ul>
+</section>
 
 <section class="res-section" id="guilds" aria-labelledby="guilds-h">
   <h2 id="guilds-h">Guilds &amp; industry organizations</h2>
@@ -379,7 +389,7 @@
   </div>
 </footer>
 
-<script src="../assets/js/main.js?v=20261016a"></script>
+<script src="../assets/js/main.js?v=20261018a"></script>
 <script>
 (function(){
   var input=document.getElementById('res-filter'); if(!input) return;
