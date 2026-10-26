@@ -243,3 +243,10 @@ document.querySelectorAll('[data-year]').forEach((el) => (el.textContent = new D
     if (sel.indexOf(ADDR) !== -1) send('copy_address');
   });
 })();
+
+// Track blog call-to-action clicks (end-of-post box and mid-post box)
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[data-cta], [data-cta-box] a');
+  if (!a || typeof gtag !== 'function') return;
+  gtag('event', 'cta_click', { cta_location: a.getAttribute('data-cta') || 'post_mid', page_path: location.pathname });
+});
