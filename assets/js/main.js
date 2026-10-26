@@ -227,3 +227,19 @@ document.querySelectorAll('[data-year]').forEach((el) => (el.textContent = new D
   window.addEventListener('resize', fit);
   window.addEventListener('load', fit);
 })();
+
+// Track clicks on (and copies of) Matt's email address, since emails bypass the site's forms
+(function () {
+  var ADDR = 'matt@screenwritingconsultant.com';
+  function send(method) {
+    if (typeof gtag === 'function') gtag('event', 'email_click', { method: method, page_path: location.pathname });
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="mailto:"]');
+    if (a) send('mailto_click');
+  });
+  document.addEventListener('copy', function () {
+    var sel = String(window.getSelection ? window.getSelection() : '');
+    if (sel.indexOf(ADDR) !== -1) send('copy_address');
+  });
+})();
