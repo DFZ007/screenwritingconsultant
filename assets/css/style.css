@@ -1400,3 +1400,4 @@ picture > source { display: none; }
 .contact-or { margin-top: 22px; font-family: var(--serif-text); font-style: italic; font-size: 18px; color: var(--text-3); }
 .contact-or__arrow::after { content: "\2192"; font-style: normal; margin-left: 6px; color: var(--gold-ink); }
 @media (max-width: 1000px) { .contact-or__arrow::after { content: "\2193"; } }
+.mini--writing { cursor: default; }
