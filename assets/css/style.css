@@ -1401,3 +1401,12 @@ picture > source { display: none; }
 .contact-or__arrow::after { content: "\2192"; font-style: normal; margin-left: 6px; color: var(--gold-ink); }
 @media (max-width: 1000px) { .contact-or__arrow::after { content: "\2193"; } }
 .mini--writing { cursor: default; }
+
+/* Hero: current work up front */
+.hero__now { margin: 18px 0 0; padding: 12px 0 12px 16px; border-left: 3px solid var(--gold); font-family: var(--sans); font-size: 17px; line-height: 1.5; color: var(--text-2, #3a3a3a); max-width: 46ch; }
+.hero__now strong { color: #111111; font-weight: 600; }
+.hero__now-label { display: inline-block; margin-right: 8px; padding: 2px 8px; background: var(--gold); color: #111111; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; border-radius: 2px; vertical-align: 2px; }
+/* Box office source line */
+.tagline__source { display: block; margin-top: 16px; font-family: var(--sans); font-size: 15px; line-height: 1.5; letter-spacing: 0; color: #BDBDB8; }
+.tagline .tagline__source em { color: #E6E6E1; font-style: italic; }
+.tagline__source a { color: #E6E6E1; text-decoration: underline; text-underline-offset: 3px; }
