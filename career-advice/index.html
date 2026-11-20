@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=Courier+Prime&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=20261120b">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261120c">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -84,7 +84,7 @@
 }
 </script>
 </head>
-<body>
+<body class="svcp-page">
 
 
 <header class="site-header">
@@ -360,6 +360,20 @@
   </div>
 </footer>
 
+<div class="svcp-mobile-cta" id="svcp-mobile-cta"><a class="btn btn--primary" href="#submit">Get career advice <span aria-hidden="true">&middot;</span> $200/hr</a></div>
+<script>
+(function () {
+  var bar = document.getElementById('svcp-mobile-cta'), form = document.getElementById('submit'), cover = document.querySelector('.svcp-cover');
+  if (!bar || !form || !cover || !('IntersectionObserver' in window)) return;
+  var seen = new Map();
+  bar.classList.add('is-hidden');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { seen.set(en.target, en.isIntersecting); });
+    bar.classList.toggle('is-hidden', !!(seen.get(cover) || seen.get(form)));
+  }, { rootMargin: '0px 0px -20% 0px' });
+  io.observe(cover); io.observe(form);
+})();
+</script>
 <script src="../assets/js/main.js?v=20261025b"></script>
 </body>
 </html>

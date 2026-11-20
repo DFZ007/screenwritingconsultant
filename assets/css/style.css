@@ -1448,3 +1448,36 @@ picture > source { display: none; }
 .svcp-cover .btn--ghost:hover { color: #FFFFFF; border-color: #FFFFFF; }
 .svcp-cover :focus-visible { outline-color: #FFFFFF; }
 .svcp-hero h2 { font-size: clamp(30px, 3.4vw, 46px); line-height: 1.1; margin: 0; }
+/* Service pages: readability + mobile */
+.svcp-cover .label { font-size: 17px; font-weight: 600; letter-spacing: 0.02em; }
+.svcp-cover .crumbs { font-size: 16px; }
+.svcp-page .eyebrow { font-size: 13px; }
+.svcp-page .svc-meta li > span:first-child { font-size: 12px; }
+.svcp-page .svc-meta li, .svcp-page .svc-gets li { font-size: 16px; }
+.svcp-page .svc-desc { font-size: 17px; }
+.svcp-mobile-cta { display: none; }
+@media (max-width: 700px) {
+  .svcp-cover { min-height: 0; padding-block: 36px 44px; }
+  .svcp-cover .wrap { gap: 16px; }
+  .svcp-cover .crumbs { font-size: 15px; }
+  .svcp-cover .label { font-size: 16px; }
+  .svcp-cover h1 { font-size: clamp(36px, 10vw, 46px); line-height: 1.08; }
+  .svcp-cover .lede { font-size: 18px; line-height: 1.55; }
+  .svcp-cover .hero__actions, .svcp-hero .hero__actions { flex-direction: column; align-items: stretch; }
+  .svcp-cover .hero__actions .btn { width: 100%; justify-content: center; text-align: center; }
+  .svcp-hero { padding-block: 40px; gap: 28px; }
+  .svcp-hero h2 { font-size: 30px; }
+  .svcp-hero .hero__photo { justify-self: center; max-width: 260px; }
+  .svcp-page .lede, .svcp-page .beyond__text, .svcp-extra p, .svcp-bio p { font-size: 18px; line-height: 1.6; }
+  .svcp-card .service { padding: 24px 20px; }
+  .svcp-card .btn { width: 100%; text-align: center; justify-content: center; }
+  .svcp-quote blockquote { font-size: 26px; }
+  .svcp-page .faq summary { font-size: 20px; }
+  .svcp-page .faq details p { font-size: 17px; }
+  .svcp-titlecards .titlecard__role { font-size: 11px; }
+  /* Sticky "book" bar on phones; hidden while the form is on screen */
+  .svcp-mobile-cta { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,0.97); border-top: 1px solid var(--card-line); box-shadow: 0 -4px 16px rgba(0,0,0,0.08); transition: transform 0.25s ease; }
+  .svcp-mobile-cta .btn { display: flex; width: 100%; justify-content: center; align-items: center; gap: 8px; font-size: 17px; min-height: 52px; }
+  .svcp-mobile-cta.is-hidden { transform: translateY(110%); }
+  .svcp-page .site-footer { padding-bottom: 96px; }
+}
