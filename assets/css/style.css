@@ -1033,7 +1033,7 @@ h1 em, h2 em { font-style: italic; color: var(--gold-ink); }
 .faq__ask { margin-top: 12px; padding: 22px 24px; background: var(--band); border-left: 3px solid var(--gold); border-radius: 4px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
 .faq__ask p { margin: 0; font-family: var(--display); font-size: 21px; color: #111; }
 .faq__ask .btn { font-size: 15px; padding: 12px 20px; min-height: 44px; }
-@media (max-width: 900px) { .faq__side { position: static; } }
+@media (max-width: 900px) { .faq__side { position: static; } .faq { grid-template-columns: 1fr; } }
 .who__lead em { color: var(--gold-ink); font-style: italic; }
 .honors li { align-items: flex-start; } .honors__icon { margin-top: 2px; }
 
@@ -1410,3 +1410,28 @@ picture > source { display: none; }
 .tagline__source { display: block; margin-top: 16px; font-family: var(--sans); font-size: 15px; line-height: 1.5; letter-spacing: 0; color: #BDBDB8; }
 .tagline .tagline__source em { color: #E6E6E1; font-style: italic; }
 .tagline__source a { color: #E6E6E1; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Service landing pages (/screenplay-notes/, /script-coverage/, etc.) */
+.svcp-hero .crumbs { margin: 0; }
+.svcp-hero h1 { font-size: clamp(40px, 5vw, 68px); }
+.svcp-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+.svcp-card { position: sticky; top: 110px; }
+.svcp-card .service { padding: 36px; }
+.svcp-extra { margin-top: 40px; }
+.svcp-extra h2 { font-size: clamp(28px, 2.8vw, 38px); margin-bottom: 16px; }
+.svcp-extra p { font-size: 17px; line-height: 1.6; color: var(--text-2, #333); max-width: 62ch; }
+.svcp-extra .credits-table { margin-top: 16px; }
+.svcp-quote { margin: 40px 0 0; padding-left: 24px; border-left: 2px solid var(--gold); }
+.svcp-quote blockquote { margin: 0; font-family: var(--display); font-style: italic; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.25; color: #111; }
+.svcp-quote figcaption { margin-top: 10px; font-size: 15px; color: var(--muted); }
+.svcp-bio p { font-family: var(--serif-text); font-size: 19px; line-height: 1.65; color: var(--text-2, #333); max-width: 70ch; margin: 0; }
+.svcp-titlecards { margin-top: 40px; }
+@media (max-width: 1000px) { .svcp-grid { grid-template-columns: 1fr; } .svcp-card { position: static; } }
+@media (max-width: 560px) {
+  .svcp-titlecards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .svcp-titlecards .titlecard { min-height: 0; }
+  .svcp-titlecards .titlecard:nth-child(n+4) { display: none; }
+  .svcp-titlecards .titlecard__poster { margin-bottom: 8px; }
+  .svcp-titlecards .titlecard__role { font-size: 10px; }
+  .svcp-titlecards .titlecard__title { font-size: 17px; padding: 4px 0 0; }
+}
