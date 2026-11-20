@@ -1435,3 +1435,16 @@ picture > source { display: none; }
   .svcp-titlecards .titlecard__role { font-size: 10px; }
   .svcp-titlecards .titlecard__title { font-size: 17px; padding: 4px 0 0; }
 }
+/* Service pages: cover photo hero (same typewriter shot as the homepage) */
+.svcp-cover { position: relative; display: flex; align-items: center; min-height: min(62vh, 580px); padding-block: clamp(48px, 7vw, 96px); color: #FFFFFF;
+  background: linear-gradient(180deg, rgba(0,0,0,0.66) 0%, rgba(0,0,0,0.58) 50%, rgba(0,0,0,0.72) 100%), url(../img/hero-typewriter.jpg) center 78% / cover no-repeat #111111; }
+.svcp-cover .wrap { width: 100%; display: flex; flex-direction: column; gap: 22px; }
+.svcp-cover .crumbs, .svcp-cover .crumbs a { color: rgba(255,255,255,0.75); }
+.svcp-cover .label { color: var(--gold); margin: 0; }
+.svcp-cover h1 { color: #FFFFFF; font-size: clamp(42px, 5.6vw, 80px); line-height: 1.04; letter-spacing: -0.01em; max-width: 18ch; text-shadow: 0 2px 24px rgba(0,0,0,0.45); margin: 0; }
+.svcp-cover .lede { color: rgba(255,255,255,0.88); max-width: 58ch; margin: 0; }
+.svcp-cover .hero__actions { padding-top: 6px; }
+.svcp-cover .btn--ghost { color: #FFFFFF; border-color: rgba(255,255,255,0.6); }
+.svcp-cover .btn--ghost:hover { color: #FFFFFF; border-color: #FFFFFF; }
+.svcp-cover :focus-visible { outline-color: #FFFFFF; }
+.svcp-hero h2 { font-size: clamp(30px, 3.4vw, 46px); line-height: 1.1; margin: 0; }
