@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=Courier+Prime&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=20261119a">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261121a">
 </head>
 <body>
 
@@ -32,7 +32,17 @@
     </button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <a href="/">Home</a>
-      <a href="../#services">Services</a>
+      <div class="nav__item">
+        <a class="nav__parent" href="../#services">Services<svg class="nav__caret" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <a href="/screenplay-notes/">Screenplay Notes</a>
+          <a href="/tv-pilot-notes/">TV Pilot Notes</a>
+          <a href="/treatment-analysis/">Treatment Analysis</a>
+          <a href="/logline-punch-up/">Logline Punch-Up</a>
+          <a href="/script-coverage/">Script Coverage</a>
+          <a href="/career-advice/">Career &amp; Business Advice</a>
+        </div>
+      </div>
       <a href="../about/">About</a>
       <a href="../resources/">Resources</a>
       <a href="../blog/">Blog</a>
@@ -116,6 +126,15 @@
       <a href="../#submit">Contact</a>
       <a href="../privacy/">Privacy</a>
       <a href="../terms/">Terms</a>
+    </nav>
+    <nav class="footer-services" aria-label="Services">
+      <span class="footer-services__label">Services</span>
+      <a href="/screenplay-notes/">Screenplay Notes</a>
+      <a href="/tv-pilot-notes/">TV Pilot Notes</a>
+      <a href="/treatment-analysis/">Treatment Analysis</a>
+      <a href="/logline-punch-up/">Logline Punch-Up</a>
+      <a href="/script-coverage/">Script Coverage</a>
+      <a href="/career-advice/">Career &amp; Business Advice</a>
     </nav>
     <p>© <span data-year>2026</span> Screenwriting Consultant. All rights reserved.</p>
   </div>

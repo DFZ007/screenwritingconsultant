@@ -1481,3 +1481,39 @@ picture > source { display: none; }
   .svcp-mobile-cta.is-hidden { transform: translateY(110%); }
   .svcp-page .site-footer { padding-bottom: 96px; }
 }
+
+/* ---- Services dropdown in main nav (Nov 2026) ---- */
+.nav__item { position: relative; display: flex; align-items: center; }
+.nav .nav__parent { display: inline-flex; align-items: center; gap: 6px; }
+.nav__caret { transition: transform .2s ease; }
+.nav__item:hover .nav__caret, .nav__item:focus-within .nav__caret { transform: rotate(180deg); }
+.nav__item::after { content: ""; position: absolute; left: -12px; right: -12px; top: 100%; height: 18px; }
+.nav__menu { position: absolute; top: calc(100% + 16px); left: -22px; min-width: 260px; padding: 10px 0; background: #FFFFFF; border: 1px solid var(--line); border-top: 2px solid var(--gold); border-radius: 2px; box-shadow: 0 14px 32px rgba(17, 17, 17, 0.12); opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity .18s ease, transform .18s ease, visibility 0s linear .18s; z-index: 20; }
+.nav__item:hover .nav__menu, .nav__item:focus-within .nav__menu { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.nav .nav__menu a { display: block; padding: 11px 22px; font-size: 15px; color: var(--text-2); white-space: nowrap; box-shadow: none; }
+.nav .nav__menu a:hover, .nav .nav__menu a:focus-visible { background: var(--gold-tint); color: var(--text); }
+.nav .nav__menu a[aria-current="page"] { color: var(--text); font-weight: 600; box-shadow: inset 3px 0 0 var(--gold); }
+@media (max-width: 900px) {
+  .nav.is-open { max-height: calc(100vh - 84px); overflow-y: auto; }
+  .nav__item { display: block; }
+  .nav__item::after { display: none; }
+  .nav__caret { display: none; }
+  .nav .nav__parent { display: flex; }
+  .nav__menu { position: static; min-width: 0; padding: 4px 0 10px 16px; background: none; border: 0; border-bottom: 1px solid var(--line); box-shadow: none; opacity: 1; visibility: visible; transform: none; }
+  .nav .nav__menu a { padding: 10px 0; font-size: 16px; border-bottom: 0; white-space: normal; }
+  .nav .nav__menu a:hover { background: none; }
+  .nav .nav__menu a[aria-current="page"] { box-shadow: none; color: var(--gold-ink, #7E6331); }
+}
+
+/* ---- Footer services row ---- */
+.site-footer .footer-services { flex-basis: 100%; display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 24px; padding-top: 4px; }
+.site-footer .footer-services__label { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.site-footer .footer-services a[aria-current="page"] { color: var(--text); }
+
+/* ---- Homepage card links to service pages ---- */
+.svc-more { display: block; margin-top: 12px; text-align: center; font-size: 15px; font-weight: 600; color: var(--gold-ink, #7E6331); text-decoration: none; }
+.svc-more:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+.svc-more--inline { display: inline; margin: 0 0 0 18px; }
+.mini__links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 0; }
+.beyond__link { display: inline-block; margin-top: 6px; font-weight: 600; color: var(--gold-ink, #7E6331); text-decoration: none; border-bottom: 1px solid var(--gold); }
+.beyond__link:hover { color: var(--text); }

@@ -75,7 +75,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=Courier+Prime&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20261119a">
+<link rel="stylesheet" href="assets/css/style.css?v=20261121a">
 </head>
 <body>
 
@@ -88,7 +88,17 @@
     </button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <a href="/" aria-current="page">Home</a>
-      <a href="#services">Services</a>
+      <div class="nav__item">
+        <a class="nav__parent" href="#services">Services<svg class="nav__caret" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <a href="/screenplay-notes/">Screenplay Notes</a>
+          <a href="/tv-pilot-notes/">TV Pilot Notes</a>
+          <a href="/treatment-analysis/">Treatment Analysis</a>
+          <a href="/logline-punch-up/">Logline Punch-Up</a>
+          <a href="/script-coverage/">Script Coverage</a>
+          <a href="/career-advice/">Career &amp; Business Advice</a>
+        </div>
+      </div>
       <a href="about/">About</a>
       <a href="resources/">Resources</a>
       <a href="blog/">Blog</a>
@@ -297,7 +307,7 @@
         <picture><source srcset="assets/img/eggs/screenplay.webp" type="image/webp"><img class="beyond__art" src="assets/img/eggs/screenplay.png" alt="" width="360" height="246" loading="lazy"></picture>
         <p class="beyond__label">Better than coverage</p>
       </div>
-      <p class="beyond__text">Coverage is a quick synopsis and boilerplate notes from a reader you'll never meet. <strong>Tabak reads every page himself. No readers, no assistants, no AI.</strong> It's a one-on-one conversation where he walks you through exactly what isn't working and gives you real creative solutions.</p>
+      <p class="beyond__text">Coverage is a quick synopsis and boilerplate notes from a reader you'll never meet. <strong>Tabak reads every page himself. No readers, no assistants, no AI.</strong> It's a one-on-one conversation where he walks you through exactly what isn't working and gives you real creative solutions. <a class="beyond__link" href="/script-coverage/">How Matt&rsquo;s script coverage works <span aria-hidden="true">&rarr;</span></a></p>
     </div>
     <div class="services services--4">
       <article class="service service--featured is-selected" data-option="0" tabindex="0">
@@ -311,6 +321,7 @@
         <p class="svc-desc">Send me your logline and in a 30-minute phone call or Zoom I will assess its viability and give suggestions. A low-commitment way to see how we work together.</p>
         <ul class="svc-gets"><li>Viability check</li><li>Sharper logline</li><li>Next steps</li></ul>
         <a class="btn btn--primary" href="#submit">Punch up my logline</a>
+        <a class="svc-more" href="/logline-punch-up/">See full details <span aria-hidden="true">&rarr;</span></a>
       </article>
       <article class="service" data-option="1" tabindex="0">
         <div class="svc-top"><p class="label">Before you write</p></div>
@@ -324,6 +335,7 @@
         <ul class="svc-gets"><li>Detailed analysis</li><li>Ideas &amp; constructive criticism</li><li>Written summary</li></ul>
         <p class="svc-note">Over 10 pages? Contact me for a quote.</p>
         <a class="btn btn--ghost" href="#submit">Get treatment notes</a>
+        <a class="svc-more" href="/treatment-analysis/">See full details <span aria-hidden="true">&rarr;</span></a>
       </article>
       <article class="service" data-option="2" tabindex="0">
         <div class="svc-top"><p class="label">Television</p></div>
@@ -337,6 +349,7 @@
         <ul class="svc-gets"><li>Detailed analysis</li><li>Ideas &amp; constructive criticism</li><li>Written summary</li></ul>
         <p class="svc-note">Over 65 pages? Contact me for a quote.</p>
         <a class="btn btn--ghost" href="#submit">Get pilot notes</a>
+        <a class="svc-more" href="/tv-pilot-notes/">See full details <span aria-hidden="true">&rarr;</span></a>
       </article>
       <article class="service" data-option="3" tabindex="0">
         <div class="svc-top"><p class="label">Feature film</p><span class="svc-badge">Most requested</span></div>
@@ -350,6 +363,7 @@
         <ul class="svc-gets"><li>Detailed analysis</li><li>Ideas &amp; constructive criticism</li><li>Written summary</li></ul>
         <p class="svc-note">Over 120 pages? Contact me for a quote.</p>
         <a class="btn btn--ghost" href="#submit">Get feature notes</a>
+        <a class="svc-more" href="/screenplay-notes/">See full details <span aria-hidden="true">&rarr;</span></a>
       </article>
     </div>
     <div class="services-mini services-mini--single">
@@ -359,7 +373,7 @@
           <p class="mini__label">The business side</p>
           <div class="mini__head"><h3>Legal, financial, production &amp; career help</h3><p class="mini__price">$200<small>an hour</small></p></div>
           <p>Help with a contract, a question about a producer's offer, or the financial and legal intricacies of the business.</p>
-          <a class="mini__link" href="#submit">Get career advice <span aria-hidden="true">&rarr;</span></a>
+          <span class="mini__links"><a class="mini__link" href="#submit">Get career advice <span aria-hidden="true">&rarr;</span></a> <a class="svc-more svc-more--inline" href="/career-advice/">See full details</a></span>
         </div>
       </article>
       <article class="mini mini--writing">
@@ -670,6 +684,15 @@
       <a href="#submit">Contact</a>
       <a href="privacy/">Privacy</a>
       <a href="terms/">Terms</a>
+    </nav>
+    <nav class="footer-services" aria-label="Services">
+      <span class="footer-services__label">Services</span>
+      <a href="/screenplay-notes/">Screenplay Notes</a>
+      <a href="/tv-pilot-notes/">TV Pilot Notes</a>
+      <a href="/treatment-analysis/">Treatment Analysis</a>
+      <a href="/logline-punch-up/">Logline Punch-Up</a>
+      <a href="/script-coverage/">Script Coverage</a>
+      <a href="/career-advice/">Career &amp; Business Advice</a>
     </nav>
     <p>© <span data-year>2026</span> Screenwriting Consultant. All rights reserved.</p>
   </div>
