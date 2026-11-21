@@ -159,3 +159,13 @@ Decision: keep the live Zoom/phone notes call on the homepage as the main offer 
 ### Timing and ads
 - New domain: expect 3–6 months to rank; "script doctor" is the best near-term shot.
 - These two pages are the right landing pages for a Google Ads test on coverage and script doctor terms ($2–$9 CPCs), better than the homepage.
+
+## Nov 21, 2026: service landing pages wired into the site
+
+- Six service pages live: /script-coverage/, /screenplay-notes/, /tv-pilot-notes/, /treatment-analysis/, /logline-punch-up/, /career-advice/ (built by /home/claude/gen/make_pages.py; also the Google Ads final URLs and sitelinks).
+- Internal links: Services dropdown in main nav, Services row in footer, "See full details" on each homepage pricing card, "Better than coverage" box links to /script-coverage/. Re-run add_service_nav.py after regenerating pages.
+- Blog mid-post CTA boxes now point to the matching service page (end-of-post CTA still goes to the homepage form). Hierarchy: blog post = informational, service page = transactional.
+- FAQPage JSON-LD on all six service pages; homepage Offer schema now has page URLs; career advice price corrected to $200 (was $195 in schema only).
+- llms.txt has a Services section.
+- Watch: three pages can rank for "script coverage" (homepage title, /blog/script-coverage/, /script-coverage/). Check Search Console in ~4 weeks; if the homepage keeps taking coverage impressions, drop "Coverage" from the homepage title.
+- Submitted to Search Console Nov 21 (sitemap resubmitted, 23 URLs; indexing requested for all six).
